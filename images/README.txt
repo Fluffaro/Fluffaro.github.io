@@ -1,1 +1,3 @@
-Put photos here: portrait.jpg for the About section, and project-atlas.jpg, project-relay.jpg, project-beacon.jpg, project-lens.jpg, project-ledger.jpg, project-harbor.jpg for the project cards.
+Project card images: portrait.jpg for the About section, and one 16:10 image per project card.
+Done: project-overload.jpg, project-spendable.jpg, project-queue-tip.jpg, project-leasy.jpg, project-shortlist.jpg
+Still needed: project-beaker-counter.jpg

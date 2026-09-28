@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shortlist | Neil Villarey</title>
+<meta name="description" content="Shortlist is an AI job search workspace that ranks new roles against your resume, runs your pipeline and tailors documents, built by Neil Villarey with Next.js, TypeScript and DeepSeek.">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="work.css">
+<style>
+  :root { --tint: #3fcf8e; }
+  .hero::before { background: radial-gradient(ellipse 60% 55% at 70% 35%, color-mix(in srgb, #169a66 28%, transparent), transparent 70%); }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="../index.html#work"><i class="ph ph-arrow-left"></i> ~/neilvillarey</a>
+    <span style="display:inline-flex;align-items:center;gap:8px;color:var(--color-neutral-500)"><span class="dot"></span>work/shortlist</span>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="kicker rv">Web app · AI · 2026</p>
+      <h1 class="rv">Shortlist</h1>
+      <p class="lede rv">A job search workspace that does the tedious parts for you. It pulls new roles from job boards, scores each one against your resume, hides the duplicates and the risky ones, and turns every application into a hub with its people, prep and follow-ups.</p>
+      <dl class="meta rv">
+        <div><dt>Role</dt><dd>Solo developer: product, design and build</dd></div>
+        <div><dt>Platform</dt><dd>Web, runs locally</dd></div>
+        <div><dt>Stack</dt><dd>Next.js, TypeScript, DeepSeek</dd></div>
+        <div><dt>Status</dt><dd>In progress, freshly redesigned</dd></div>
+      </dl>
+    </div>
+    <div class="wrap">
+      <div class="stage rv">
+        <div class="browser back"><img src="img/shortlist/today.webp" alt="Today screen with the next interview countdown and a queue of tasks"></div>
+        <div class="browser front"><img src="img/shortlist/job.webp" alt="Application hub for a Senior Frontend Engineer role with stage timeline and prep checklist" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat why.md</b></p>
+      <h2 class="rv">Job hunting is a full time job. It shouldn't feel like one.</h2>
+      <div class="prose rv">
+        <p>A real job search spreads across five job boards, a spreadsheet, a folder of resume versions, a calendar and a pile of half written thank-you emails. The good roles get buried under reposts and scams.</p>
+        <p>Shortlist brings that into one place and adds judgment: it ranks what's worth applying to, explains why, and tells you what to do today so nothing goes stale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>ls ./features</b></p>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">01</p>
+          <h3>Today tells you what to do</h3>
+          <p>The day opens with the next interview and a countdown, then a queue of what's due: prep, follow-ups, thank-you notes and applications about to go stale, each with a one click action.</p>
+          <ul>
+            <li>Active applications, response rate and time to reply at a glance</li>
+            <li>This week's schedule beside the queue</li>
+          </ul>
+        </div>
+        <div class="web rv">
+          <div class="browser"><img src="img/shortlist/today.webp" alt="Today screen" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide flip">
+        <div class="rv">
+          <p class="num">02</p>
+          <h3>Matches ranked, and explained</h3>
+          <p>New roles are pulled from job boards like LinkedIn, Jobstreet and Kalibrr, enriched with AI and scored against your resume. Each match says why it fits, from skill overlap to pay and location, and duplicates, stale posts and risky listings are filtered out.</p>
+          <ul>
+            <li>Filters for remote, 90+ matches, salary and source</li>
+            <li>Tailor a resume or save a role straight from the match</li>
+          </ul>
+        </div>
+        <div class="web rv">
+          <div class="browser"><img src="img/shortlist/discover.webp" alt="Discover screen with ranked job matches and a why it fits panel" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">03</p>
+          <h3>Every application is a hub</h3>
+          <p>The pipeline board moves roles from saved to offer by drag and drop. Opening one shows its stage timeline, activity, notes, emails, the job description and salary, alongside a prep checklist, the people involved and the documents you sent.</p>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/shortlist/pipeline.webp" alt="Pipeline board with application cards by stage" loading="lazy"></div>
+          <div class="browser"><img src="img/shortlist/job.webp" alt="Application hub with activity and prep checklist" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide flip">
+        <div class="rv">
+          <p class="num">04</p>
+          <h3>Tailored documents with an ATS score</h3>
+          <p>Keep a few base resumes, then tailor a version for each role. Every version gets an ATS match score and suggested edits that reorder real skills and experience toward the job, without inventing anything.</p>
+          <ul>
+            <li>Tailored resumes and cover letters tracked per application</li>
+            <li>Suggested outreach messages for recruiters and interviewers</li>
+          </ul>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/shortlist/documents.webp" alt="Documents with base resumes and tailored versions with ATS scores" loading="lazy"></div>
+          <div class="browser"><img src="img/shortlist/people.webp" alt="People list with a suggested thank-you message" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">05</p>
+          <h3>Know what's working</h3>
+          <p>Insights charts applications against responses week by week, shows the funnel from applied to offer, and compares response rates by source. The calendar lays out interviews, deadlines and tasks, and exports to any calendar app.</p>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/shortlist/insights.webp" alt="Insights with applications versus responses and a funnel" loading="lazy"></div>
+          <div class="browser"><img src="img/shortlist/calendar.webp" alt="Weekly calendar of interviews and deadlines" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat stack.txt</b></p>
+      <h2 class="rv">Under the hood</h2>
+      <div class="stack">
+        <div class="card rv"><div class="k">App</div><h4>Next.js + TypeScript</h4><p>App Router with server actions and route handlers, organised by feature.</p></div>
+        <div class="card rv"><div class="k">AI</div><h4>DeepSeek</h4><p>Enriches job posts and drafts outreach, while matching and risk checks run as plain, testable rules.</p></div>
+        <div class="card rv"><div class="k">Ingest</div><h4>Job board sync</h4><p>Collects roles from job boards and your own links, then dedupes and scores them.</p></div>
+        <div class="card rv"><div class="k">Privacy</div><h4>Local first</h4><p>Runs on your machine in local mode, so your resume and search data stay with you.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <div>
+      <small>Next project</small>
+      <a class="big" href="overload.html">Overload <i class="ph ph-arrow-right"></i></a>
+    </div>
+    <a class="home" href="../index.html#work">Back to all work</a>
+  </div>
+</footer>
+
+<script src="work.js"></script>
+</body>
+</html>

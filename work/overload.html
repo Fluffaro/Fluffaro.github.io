@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overload | Neil Villarey</title>
+<meta name="description" content="Overload is an offline gym tracker for 5/3/1 lifters, built by Neil Villarey with React Native, Expo and SQLite.">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="work.css">
+<style>:root { --tint: #9184d9; }</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="../index.html#work"><i class="ph ph-arrow-left"></i> ~/neilvillarey</a>
+    <span style="display:inline-flex;align-items:center;gap:8px;color:var(--color-neutral-500)"><span class="dot"></span>work/overload</span>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="kicker rv">Mobile app · Android · 2026</p>
+      <h1 class="rv">Overload</h1>
+      <p class="lede rv">A gym logger for lifters running 5/3/1. It tells you exactly which plates to load on every set, progresses each lift by its own rule, and turns the weight you move into levels you actually earned.</p>
+      <dl class="meta rv">
+        <div><dt>Role</dt><dd>Solo developer: product, design and build</dd></div>
+        <div><dt>Platform</dt><dd>Android, offline first</dd></div>
+        <div><dt>Stack</dt><dd>React Native, Expo, SQLite, Drizzle ORM</dd></div>
+        <div><dt>Status</dt><dd>Finished</dd></div>
+      </dl>
+    </div>
+    <div class="wrap">
+      <div class="trio rv">
+        <div class="phone"><img src="img/overload/progress.webp" alt="Progress screen with weekly tonnage and estimated one rep max charts" loading="lazy"></div>
+        <div class="phone"><img src="img/overload/home.webp" alt="Home screen showing the next deadlift top set of 102.5 kg and the plates to load per side"></div>
+        <div class="phone"><img src="img/overload/log.webp" alt="Live workout screen logging a 45 kg warm up set with plate colors" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat why.md</b></p>
+      <h2 class="rv">Built for the barbell, not the spreadsheet</h2>
+      <div class="prose rv">
+        <p>Most workout apps tell you to lift 112.5 kg and leave the math to you, halfway through a set, with chalk on your hands. Overload was built around one promise: the answer to "what do I put on the bar?" lives right inside the set row, worked out from the bars and plates you actually own.</p>
+        <p>It runs completely offline. There's no required account and nothing leaves the phone unless you export it. Every number in the app, from XP to muscle levels to personal records, is calculated from the sets you log, never handed out for showing up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>ls ./features</b></p>
+
+      <div class="feature">
+        <div class="rv">
+          <p class="num">01</p>
+          <h3>Plate math inside every set</h3>
+          <p>Each set shows the weight, the reps and the exact plates to load per side, colored like real bumper plates. Change the weight and the loadout updates instantly.</p>
+          <ul>
+            <li>Solves loads against your own bar and plate inventory</li>
+            <li>Never suggests a weight you can't build</li>
+            <li>Warm up and working sets planned from your training max</li>
+          </ul>
+        </div>
+        <div class="shots rv">
+          <div class="phone"><img src="img/overload/home.webp" alt="Next up card with barbell diagram and carry per side" loading="lazy"></div>
+          <div class="phone"><img src="img/overload/log.webp" alt="Set list with plates per side under the active set" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="rv">
+          <p class="num">02</p>
+          <h3>Set up in under a minute</h3>
+          <p>A three step onboarding asks for units, bodyweight, the equipment on your rack and your training maxes. From there the whole 5/3/1 + Boring But Big cycle is generated.</p>
+          <ul>
+            <li>Kilograms or pounds, stored the same way underneath</li>
+            <li>Bars and plate pairs you own, with the smallest jump you can make</li>
+            <li>Training maxes preview week one's top set before you start</li>
+          </ul>
+        </div>
+        <div class="shots rv">
+          <div class="phone"><img src="img/overload/rack.webp" alt="Onboarding step two listing bars and plate pairs owned" loading="lazy"></div>
+          <div class="phone"><img src="img/overload/maxes.webp" alt="Onboarding step three setting training maxes with week one top sets" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="rv">
+          <p class="num">03</p>
+          <h3>Progress you can see</h3>
+          <p>Weekly tonnage, estimated one rep max per lift and training max progression across cycles, over six weeks, twelve weeks, a year or all time.</p>
+          <ul>
+            <li>Each lift progresses by its own rule: 5/3/1, linear or double progression</li>
+            <li>Training max shown against your estimated max, so you know when to bump it</li>
+          </ul>
+        </div>
+        <div class="shots rv">
+          <div class="phone"><img src="img/overload/progress.webp" alt="Progress charts for weekly tonnage and estimated one rep max" loading="lazy"></div>
+          <div class="phone"><img src="img/overload/history.webp" alt="History list of sessions with volume, sets and personal records" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="rv">
+          <p class="num">04</p>
+          <h3>A game layer that stays honest</h3>
+          <p>XP comes from tonnage, muscle levels come from the work each lift puts on each muscle, and milestones unlock by load, like two plate squats and a bodyweight bench. It can be switched off completely without touching your logs.</p>
+          <ul>
+            <li>Strength tree of real milestones per lift</li>
+            <li>Achievements, streaks and weekly quests built from last week's numbers</li>
+            <li>Muscle balance radar to spot what's lagging</li>
+          </ul>
+        </div>
+        <div class="shots rv">
+          <div class="phone"><img src="img/overload/tree.webp" alt="Strength tree with cleared and locked milestones for squat and deadlift" loading="lazy"></div>
+          <div class="phone"><img src="img/overload/profile.webp" alt="Profile with level 24, gold rank and earned achievements" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="rv">
+          <p class="num">05</p>
+          <h3>Your data stays yours</h3>
+          <p>Every set is written to a SQLite database on the phone as you log it. Backups are a single JSON file you export and restore, and history from Hevy or KeyLifts can be imported from CSV with a column preview and a per row error report.</p>
+          <ul>
+            <li>No account needed, optional sign in only keeps a copy off the phone</li>
+            <li>Restore shows exactly what will be replaced before anything is written</li>
+          </ul>
+        </div>
+        <div class="shots rv">
+          <div class="phone"><img src="img/overload/settings.webp" alt="Settings with backup export, restore and CSV import" loading="lazy"></div>
+          <div class="phone"><img src="img/overload/routines.webp" alt="Routines screen with the active 5/3/1 plan and templates" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat stack.txt</b></p>
+      <h2 class="rv">Under the hood</h2>
+      <div class="stack">
+        <div class="card rv"><div class="k">App</div><h4>React Native + Expo</h4><p>Expo Router for navigation, Reanimated for motion, Zustand for state, built as a native Android app with EAS.</p></div>
+        <div class="card rv"><div class="k">Data</div><h4>SQLite + Drizzle ORM</h4><p>A typed schema with generated migrations. Every set is saved the moment it's logged.</p></div>
+        <div class="card rv"><div class="k">Logic</div><h4>Pure domain modules</h4><p>Plate solving, progression, PRs, XP and badges live in plain TypeScript modules with Vitest unit tests.</p></div>
+        <div class="card rv"><div class="k">Sync</div><h4>Optional Supabase backup</h4><p>An account only keeps a copy off the phone. Logging never waits on the network.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <div>
+      <small>Next project</small>
+      <a class="big" href="spendable.html">Spendable <i class="ph ph-arrow-right"></i></a>
+    </div>
+    <a class="home" href="../index.html#work">Back to all work</a>
+  </div>
+</footer>
+
+<script src="work.js"></script>
+</body>
+</html>

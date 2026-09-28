@@ -1059,7 +1059,7 @@
             { ...hostBase, className: cls + " sc-has-error" },
             h(
               "div",
-              { className: "sc-logic-error", "data-omelette-chrome": "" },
+              { className: "sc-logic-error", "data-dc-chrome": "" },
               this.__name + ": " + this.state.__err
             ),
             h(Placeholder, {
@@ -1094,7 +1094,7 @@
           { ...hostBase, className: cls + (renderErr ? " sc-has-error" : "") },
           renderErr && h(
             "div",
-            { className: "sc-logic-error", "data-omelette-chrome": "" },
+            { className: "sc-logic-error", "data-dc-chrome": "" },
             renderErr
           ),
           h(

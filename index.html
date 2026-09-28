@@ -113,7 +113,7 @@ a:hover{color:var(--color-accent-400)}
           </div>
           <div data-reveal="left" data-delay="900" style="color:var(--color-neutral-500)">{</div>
           <div data-reveal="left" data-delay="1000" style="padding-left:18px"><span style="color:var(--color-accent-300)">"role"</span>: <span style="color:var(--color-neutral-200)">"full-stack dev"</span>,</div>
-          <div data-reveal="left" data-delay="1100" style="padding-left:18px"><span style="color:var(--color-accent-300)">"stack"</span>: <span style="color:var(--color-neutral-200)">["TypeScript", "Node", "Postgres"]</span>,</div>
+          <div data-reveal="left" data-delay="1100" style="padding-left:18px"><span style="color:var(--color-accent-300)">"stack"</span>: <span style="color:var(--color-neutral-200)">["TypeScript", "React Native", "C#"]</span>,</div>
           <div data-reveal="left" data-delay="1200" style="padding-left:18px"><span style="color:var(--color-accent-300)">"focus"</span>: <span style="color:var(--color-neutral-200)">"web &amp; mobile apps"</span>,</div>
           <div data-reveal="left" data-delay="1300" style="padding-left:18px"><span style="color:var(--color-accent-300)">"available"</span>: <span style="color:var(--color-accent)">true</span></div>
           <div data-reveal="left" data-delay="1400" style="color:var(--color-neutral-500)">}</div>
@@ -169,16 +169,16 @@ a:hover{color:var(--color-accent-400)}
     </div>
     <div style="max-width:560px">
       <h2 data-reveal="up" style="font-size:40px;letter-spacing:-0.03em;margin:0 0 24px">The short version</h2>
-      <p data-reveal="up" data-delay="100" style="font-size:16px;line-height:1.75;color:var(--color-neutral-300);text-wrap:pretty">A sentence or two on who you are and what you build. Lead with the work you want more of — APIs, product engineering, mobile apps, whatever it is.</p>
-      <p data-reveal="up" data-delay="200" style="font-size:16px;line-height:1.75;color:var(--color-neutral-300);text-wrap:pretty;margin-bottom:40px">Then what you're exploring right now, and what kind of projects or teams you'd like to hear from.</p>
+      <p data-reveal="up" data-delay="100" style="font-size:16px;line-height:1.75;color:var(--color-neutral-300);text-wrap:pretty">I'm a full-stack developer who builds web and mobile apps for people to use every day. I like owning the whole thing, from the database and APIs to a clean, fast interface on the web and in the app stores.</p>
+      <p data-reveal="up" data-delay="200" style="font-size:16px;line-height:1.75;color:var(--color-neutral-300);text-wrap:pretty;margin-bottom:40px">Right now I'm a Software Engineer at Vertere Global Solutions, a multinational company, building software used across the business. I studied Computer Science at the University of Santo Tomas, where I made the Dean's List four times. Outside of work I build mobile apps with React Native, Expo and SQLite.</p>
       <div data-reveal="up" data-delay="300" style="display:grid;grid-template-columns:auto 1fr;gap:14px 32px;font-size:14px">
         <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">location</span><span>{{ location }}</span>
         <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">email</span><a href="mailto:{{ email }}" style="text-decoration:none">{{ email }}</a>
         <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">status</span><span style="display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse 1.8s ease-out infinite"></span>Open to freelance &amp; full-time</span>
         <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">elsewhere</span>
         <span style="display:flex;gap:18px;flex-wrap:wrap">
-          <a href="#" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px"><i class="ph ph-github-logo"></i>GitHub</a>
-          <a href="#" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px"><i class="ph ph-linkedin-logo"></i>LinkedIn</a>
+          <a href="https://github.com/Fluffaro" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px"><i class="ph ph-github-logo"></i>GitHub</a>
+          <a href="https://www.linkedin.com/in/neil-villarey-461475163/" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px"><i class="ph ph-linkedin-logo"></i>LinkedIn</a>
         </span>
       </div>
     </div>
@@ -237,6 +237,7 @@ a:hover{color:var(--color-accent-400)}
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:28px">
     <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
       <div data-reveal="up" data-delay="{{ p.d }}">
+        <a href="{{ p.href }}" aria-disabled="{{ p.noLink }}" style="display:block;color:inherit;text-decoration:none;pointer-events:{{ p.pe }}">
         <article style="display:flex;flex-direction:column;gap:16px;padding:10px 10px 20px;border-radius:calc(var(--radius-lg) + 4px);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s,box-shadow .35s" style-hover="transform:translateY(-6px);background:var(--color-surface);box-shadow:var(--shadow-md)">
           <div style="aspect-ratio:16/10;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-surface);box-shadow:var(--shadow-sm)">
             <image-slot id="{{ p.slot }}" shape="rect" alt="{{ p.name }} screenshot"></image-slot>
@@ -246,11 +247,12 @@ a:hover{color:var(--color-accent-400)}
             <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--color-neutral-500)">{{ p.cat }} · {{ p.year }}</span>
           </div>
           <div style="padding:0 6px">
-            <h3 style="font-size:21px;margin:0 0 8px;display:flex;align-items:center;gap:8px">{{ p.name }} <i class="ph ph-arrow-up-right" style="font-size:16px;color:var(--color-accent)"></i></h3>
+            <h3 style="font-size:21px;margin:0 0 8px;display:flex;align-items:center;gap:8px">{{ p.name }} <i class="ph ph-arrow-up-right" style="font-size:16px;color:var(--color-accent);display:{{ p.arrow }}"></i></h3>
             <p style="font-size:14px;line-height:1.6;color:var(--color-neutral-400);margin:0 0 14px;text-wrap:pretty">{{ p.desc }}</p>
             <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--color-neutral-500)">{{ p.stack }}</div>
           </div>
         </article>
+        </a>
       </div>
     </sc-for>
   </div>
@@ -335,42 +337,42 @@ a:hover{color:var(--color-accent-400)}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Neil Villarey&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;role&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Full-stack developer&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@yourname.dev&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;location&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;City, Country&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;statement&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;I build *real tools* — fast, accessible web apps, APIs that don't fall over, and mobile apps people actually use.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;nocturne&quot;,&quot;bloom&quot;],&quot;default&quot;:&quot;nocturne&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;cursorGlow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;intro&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;always&quot;,&quot;once per session&quot;,&quot;off&quot;],&quot;default&quot;:&quot;always&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:1.6,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Background&quot;},&quot;flow&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Background&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Neil Villarey&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;role&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Full-stack developer&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;neilvillarey@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;location&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Manila, Philippines&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;statement&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;I build *real tools* — fast, accessible web apps, APIs that don't fall over, and mobile apps people actually use.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;nocturne&quot;,&quot;bloom&quot;],&quot;default&quot;:&quot;nocturne&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;cursorGlow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;intro&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;always&quot;,&quot;once per session&quot;,&quot;off&quot;],&quot;default&quot;:&quot;always&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:1.6,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Background&quot;},&quot;flow&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Background&quot;}}">
 const PHRASES = ['scalable backends.', 'fast, accessible web apps.', 'APIs that don\'t fall over.', 'mobile apps people actually use.'];
 
 const SERVICES = [
-  ['Web, mobile & SaaS', 'Full-stack web development', 'Responsive, scalable apps with modern frameworks — landing pages to complex dashboards.', 'ph ph-browsers', ['React', 'Next.js', 'TypeScript', 'Tailwind']],
-  ['REST, GraphQL & servers', 'Backend APIs & microservices', 'Systems that handle real traffic and messy business logic, built for security and maintainability.', 'ph ph-graph', ['Node', 'Express', 'GraphQL', 'REST']],
-  ['SQL + NoSQL', 'Database design', 'Efficient schemas, complex queries, slow-query fixes and caching strategies.', 'ph ph-database', ['PostgreSQL', 'Redis', 'MongoDB']],
-  ['Fast & reliable', 'Performance & monitoring', 'Audits, bottleneck hunting, and the logging and alerting that keep production honest.', 'ph ph-gauge', ['Lighthouse', 'Grafana', 'Prometheus']],
+  ['Web, mobile & SaaS', 'Full-stack web development', 'Responsive, scalable apps with modern frameworks, from landing pages to complex dashboards.', 'ph ph-browsers', ['React', 'Next.js', 'TypeScript', 'Tailwind']],
   ['iOS & Android', 'Mobile app development', 'Cross-platform apps with a native feel, offline support and smooth releases to both app stores.', 'ph ph-device-mobile', ['React Native', 'Expo', 'SQLite']],
-  ['Secure deployments', 'Security & DevOps', 'Hardened defaults and CI/CD pipelines that make releases boring.', 'ph ph-shield-check', ['Docker', 'Kubernetes', 'GitHub Actions']],
+  ['REST & servers', 'Backend APIs', 'Systems that handle real traffic and messy business logic, built for security and maintainability.', 'ph ph-graph', ['Spring Boot', '.NET', 'Node', 'REST']],
+  ['SQL & cloud data', 'Database design', 'Clean schemas, solid queries and data that stays in sync between devices and the cloud.', 'ph ph-database', ['MySQL', 'SQLite', 'Supabase']],
+  ['Smarter products', 'AI-powered features', 'Matching, summarizing and document generation built into real products, not bolted on.', 'ph ph-brain', ['DeepSeek API', 'Python']],
+  ['Design first', 'UI & UX design', 'Interfaces planned in Figma before a line of code is written, so the build matches the idea.', 'ph ph-pen-nib', ['Figma', 'Canva']],
 ].map(([kicker, title, body, icon, tags], i) => ({ kicker, title, body, icon, tags, n: String(i + 1).padStart(2, '0') }));
 
 const PROJECTS = [
-  ['Atlas', 'Web', 'Live', '2026', 'Replace with a one-line pitch: what it does and who it\'s for.', 'Next.js · Postgres'],
-  ['Relay', 'API', 'Live', '2026', 'A realtime messaging service — describe the hard problem you solved.', 'Node · Redis · WebSockets'],
-  ['Beacon', 'Mobile', 'WIP', '2025', 'Mobile app project — mention the platform and the problem it solves.', 'React Native · Expo · SQLite'],
-  ['Lens', 'AI/ML', 'Done', '2025', 'Computer-vision pipeline — note the model and the accuracy you reached.', 'Python · PyTorch · Flask'],
-  ['Ledger', 'Web', 'Live', '2024', 'Local-first finance app — highlight the architecture choice.', 'React · IndexedDB'],
-  ['Harbor', 'API', 'Archived', '2023', 'Internal tooling or an older project worth keeping on the list.', 'Spring Boot · MySQL'],
-].map(([name, cat, status, year, desc, stack], i) => ({ name, cat, status, year, desc, stack, slot: 'project-' + name.toLowerCase(),
-  tagClass: 'tag ' + (status === 'Live' ? 'tag-accent' : status === 'WIP' ? 'tag-outline' : 'tag-neutral') }));
+  ['Overload', 'Mobile', 'Finished', '2026', 'Offline gym tracker for 5/3/1 lifters: plate math inside every set, per-exercise progression, and XP earned from real tonnage.', 'React Native · Expo · SQLite · Drizzle', 'work/overload.html'],
+  ['Spendable', 'Mobile', 'Finished', '2026', 'Personal finance app with a daily safe-to-spend number, budgets, bill reminders, AI receipt scanning and cloud sync.', 'React Native · Expo · SQLite · Supabase', 'work/spendable.html'],
+  ['Queue Tip', 'Web', 'In progress', '2025', 'Help desk ticketing system that routes every ticket to the least busy agent by priority, with live alerts, agent levels and an admin board.', 'Spring Boot · Next.js · MySQL', 'work/queue-tip.html'],
+  ['Leasy', 'Web', 'In progress', '2026', 'Rental manager for small landlords: rent collected vs pending, properties and tenants, utility readings and shareable receipts.', 'React · TypeScript · TanStack Start', 'work/leasy.html'],
+  ['Shortlist', 'AI/ML', 'In progress', '2026', 'AI job search workspace that ranks new roles against your resume, filters out duplicates and risky posts, and runs your whole pipeline.', 'Next.js · TypeScript · DeepSeek', 'work/shortlist.html'],
+  ['Beaker Counter', 'Web', 'In progress', '2025', 'Inventory system for lab reagents with stock levels, usage logs and a shared cloud database.', 'React · TypeScript · Supabase'],
+].map(([name, cat, status, year, desc, stack, href], i) => ({ name, cat, status, year, desc, stack, href: href || '#work', noLink: href ? 'false' : 'true', pe: href ? 'auto' : 'none', arrow: href ? 'inline-block' : 'none', slot: 'project-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+  tagClass: 'tag ' + (status === 'Finished' ? 'tag-accent' : status === 'In progress' ? 'tag-outline' : 'tag-neutral') }));
 
 const SKILLS = [
-  ['Backend', 'ph ph-hard-drives', ['Node', 'Express', 'Java', 'Spring Boot']],
-  ['Frontend', 'ph ph-layout', ['React', 'TypeScript', 'Angular']],
-  ['Data', 'ph ph-database', ['PostgreSQL', 'Redis', 'MongoDB']],
-  ['AI / ML', 'ph ph-brain', ['Python', 'PyTorch', 'TensorFlow']],
+  ['Backend', 'ph ph-hard-drives', ['Java', 'Spring Boot', 'C#', '.NET']],
+  ['Frontend', 'ph ph-layout', ['React', 'Next.js', 'TypeScript', 'Blazor']],
   ['Mobile', 'ph ph-device-mobile', ['React Native', 'Expo', 'SQLite']],
-  ['DevOps', 'ph ph-cloud', ['Docker', 'CI/CD', 'AWS', 'Linux']],
+  ['Data', 'ph ph-database', ['SQL', 'MySQL', 'Supabase']],
+  ['AI / ML', 'ph ph-brain', ['Python', 'DeepSeek API']],
+  ['Tools', 'ph ph-wrench', ['Git', 'Figma', 'Canva']],
 ].map(([group, icon, items], i) => ({ group, icon, items, d: (i % 3) * 90 }));
 
-const STATS = [[5, '+', 'years building software', 'experience'], [30, '+', 'projects shipped', 'projects'], [12, '', 'happy clients', 'clients']]
+const STATS = [[2, '+', 'years building software professionally', 'experience'], [10, '+', 'projects built', 'projects'], [4, '×', "Dean's Lister at UST", 'achievements']]
   .map(([value, suffix, label, key], i) => ({ value, suffix, label, key: '// ' + key, d: i * 120 }));
 
-const MARQUEE = ['TypeScript', 'React', 'Node', 'React Native', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Python', 'Expo', 'GraphQL', 'AWS'];
-const CATS = ['All', 'Web', 'Mobile', 'API', 'AI/ML'];
+const MARQUEE = ['TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node', 'Java', 'C#', '.NET', 'SQLite', 'MySQL', 'Supabase', 'Python'];
+const CATS = ['All', 'Web', 'Mobile', 'AI/ML'];
 const EASE = 'cubic-bezier(.2,.75,.2,1)';
 const bootLines = (handle, theme) => [
   ['~ $', `ssh guest@${handle}.dev`, 'var(--color-neutral-500)'],
@@ -663,8 +665,8 @@ class Component extends DCLogic {
       sunDisplay: this.theme() === 'bloom' ? 'none' : 'block', moonDisplay: this.theme() === 'bloom' ? 'block' : 'none',
       handle: name.toLowerCase().replace(/[^a-z0-9]+/g, ''),
       role: this.props.role ?? 'Full-stack developer',
-      email: this.props.email ?? 'hello@yourname.dev',
-      location: this.props.location ?? 'City, Country',
+      email: this.props.email ?? 'neilvillarey@gmail.com',
+      location: this.props.location ?? 'Manila, Philippines',
       glowOpacity: (this.props.cursorGlow ?? true) && this.motion() ? 1 : 0,
       marquee: MARQUEE.concat(MARQUEE),
       stats: STATS,

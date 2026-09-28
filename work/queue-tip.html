@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queue Tip | Neil Villarey</title>
+<meta name="description" content="Queue Tip is a help desk ticketing system that routes every ticket to the least busy agent by priority, built with Spring Boot, Next.js and MySQL.">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="work.css">
+<style>
+  :root { --tint: #f06a5a; }
+  .hero::before { background: radial-gradient(ellipse 60% 55% at 70% 35%, color-mix(in srgb, #ffffff 12%, transparent), transparent 70%); }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="../index.html#work"><i class="ph ph-arrow-left"></i> ~/neilvillarey</a>
+    <span style="display:inline-flex;align-items:center;gap:8px;color:var(--color-neutral-500)"><span class="dot"></span>work/queue-tip</span>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="kicker rv">Web app · Help desk · 2025</p>
+      <h1 class="rv">Queue Tip</h1>
+      <p class="lede rv">A help desk ticketing system that never lets a ticket sit in the wrong pile. Clients report an issue, it's triaged by priority, and it lands with the agent who has the most room to take it, while admins watch the whole floor in real time.</p>
+      <dl class="meta rv">
+        <div><dt>Role</dt><dd>Full-stack developer in a team of five, top contributor to the backend</dd></div>
+        <div><dt>Platform</dt><dd>Web, desktop first</dd></div>
+        <div><dt>Stack</dt><dd>Spring Boot, Next.js, MySQL, WebSockets</dd></div>
+        <div><dt>Status</dt><dd>In progress, frontend recently redesigned</dd></div>
+      </dl>
+    </div>
+    <div class="wrap">
+      <div class="stage rv">
+        <div class="browser back"><img src="img/queue-tip/admin.webp" alt="Admin board listing all tickets with priority, due time, agent and status"></div>
+        <div class="browser front"><img src="img/queue-tip/drawer.webp" alt="Ticket detail drawer with client, agent, due date and a comment thread" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat why.md</b></p>
+      <h2 class="rv">Tickets should find people, not the other way round</h2>
+      <div class="prose rv">
+        <p>In most small support teams, tickets pile up in a shared inbox and whoever grabs them first gets them. Urgent issues wait behind easy ones, and the busiest agent keeps getting more.</p>
+        <p>Queue Tip replaces the grab bag with rules. Every ticket gets a priority and a deadline, every agent has a capacity that grows with experience, and assignment always goes to the agent with the most room left. Three roles see three different views of the same live data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>ls ./features</b></p>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">01</p>
+          <h3>Report an issue in seconds</h3>
+          <p>Clients sign up with email verification, then open a ticket with a title, a category and what happened. They track every ticket they've raised, see who's working on it and when it's due, and mark it done when it's fixed.</p>
+          <ul>
+            <li>Tabs for unassigned, assigned, ongoing and completed</li>
+            <li>Search and sort by newest, highest priority or due soonest</li>
+          </ul>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/queue-tip/client.webp" alt="Client view of their own tickets" loading="lazy"></div>
+          <div class="browser"><img src="img/queue-tip/newticket.webp" alt="New ticket form with title, category and description" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide flip">
+        <div class="rv">
+          <p class="num">02</p>
+          <h3>Routed to whoever has room</h3>
+          <p>New tickets are auto-assigned to the active agent with the lowest workload who can fit the ticket's weight. If nobody can, the ticket waits as unassigned and an admin can assign it with one click.</p>
+          <ul>
+            <li>Priority sets the deadline: low, medium, high and critical</li>
+            <li>AI classifies priority when the client doesn't choose one</li>
+            <li>Agents start work from their queue, which stamps the timeline</li>
+          </ul>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/queue-tip/agent.webp" alt="Agent queue with start buttons for assigned tickets" loading="lazy"></div>
+          <div class="browser"><img src="img/queue-tip/alerts.webp" alt="Notifications panel with ticket started and completed alerts" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">03</p>
+          <h3>Every ticket tells its story</h3>
+          <p>Opening a ticket slides in a drawer with the client, agent, category, due date and completion time, plus a threaded conversation between the client and the agent. Notifications keep both sides posted as work starts and finishes.</p>
+          <ul>
+            <li>Comment threads with replies on every ticket</li>
+            <li>Real time notifications and public chat over WebSockets</li>
+          </ul>
+        </div>
+        <div class="web rv">
+          <div class="browser"><img src="img/queue-tip/drawer.webp" alt="Ticket drawer for a completed VPN ticket with comments" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide flip">
+        <div class="rv">
+          <p class="num">04</p>
+          <h3>A leveling system for agents</h3>
+          <p>Agents start as juniors and move up to mid and senior as they close tickets. Each level raises how much work they can carry, and every closed ticket earns performance points based on its category and priority.</p>
+          <ul>
+            <li>Workload bars against each agent's capacity</li>
+            <li>Completed tickets, points and active status at a glance</li>
+            <li>Admins create, promote and deactivate agents</li>
+          </ul>
+        </div>
+        <div class="web rv">
+          <div class="browser"><img src="img/queue-tip/agents.webp" alt="Admin agents board with levels, workload, completed tickets and points" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">05</p>
+          <h3>One board to run the desk</h3>
+          <p>Admins see every ticket across the company, assign what's stuck, manage categories and their point values, and turn any client into an agent from the users list.</p>
+          <ul>
+            <li>Live counts for open, unassigned, in progress and closed</li>
+            <li>Role based access for clients, agents and admins</li>
+          </ul>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/queue-tip/admin.webp" alt="Admin board of all tickets" loading="lazy"></div>
+          <div class="browser"><img src="img/queue-tip/users.webp" alt="Users list with roles and a make agent action" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat stack.txt</b></p>
+      <h2 class="rv">Under the hood</h2>
+      <div class="stack">
+        <div class="card rv"><div class="k">Backend</div><h4>Spring Boot 3</h4><p>REST controllers, JPA with MySQL, Spring Security with JWT and role checks, and OpenAPI docs through Swagger.</p></div>
+        <div class="card rv"><div class="k">Frontend</div><h4>Next.js + TypeScript</h4><p>Separate app for clients, agents and admins, styled with Tailwind and backed by React Query.</p></div>
+        <div class="card rv"><div class="k">Real time</div><h4>WebSockets (STOMP)</h4><p>Live notifications and chat pushed from the server instead of polling.</p></div>
+        <div class="card rv"><div class="k">Logic</div><h4>Workload based routing</h4><p>Capacity grows with each agent's level and history, and assignment always picks the lightest queue that fits.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <div>
+      <small>Next project</small>
+      <a class="big" href="leasy.html">Leasy <i class="ph ph-arrow-right"></i></a>
+    </div>
+    <a class="home" href="../index.html#work">Back to all work</a>
+  </div>
+</footer>
+
+<script src="work.js"></script>
+</body>
+</html>
