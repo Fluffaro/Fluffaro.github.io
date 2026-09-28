@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neil Villarey | Full-stack Developer</title>
+<meta name="description" content="Neil Villarey, full-stack developer building web apps, APIs and mobile apps.">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neil Villarey | Full-stack Developer</title>
+<meta name="description" content="Neil Villarey, full-stack developer building web apps, APIs and mobile apps.">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<script src="./image-slot.js"></script>
+<script src="./portfolio-field.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--color-bg)}
+a{color:var(--color-accent)}
+a:hover{color:var(--color-accent-400)}
+[data-theme="paper"]{--color-bg:#f4f1ea;--color-surface:#fbf9f4;--color-text:#1d1b18;--color-accent:#c94f27;--color-divider:color-mix(in srgb,#1d1b18 14%,transparent);--color-neutral-100:#1d1b18;--color-neutral-200:#2e2b27;--color-neutral-300:#45413b;--color-neutral-400:#5a554e;--color-neutral-500:#77716a;--color-neutral-600:#9d968a;--color-neutral-700:#bdb6aa;--color-neutral-800:#e4ded2;--color-neutral-900:#ece7dd;--color-accent-100:#4a1a0b;--color-accent-200:#6e2812;--color-accent-300:#a23c1c;--color-accent-400:#b8471f;--color-accent-500:#c94f27;--color-accent-600:#e0764f;--color-accent-700:#eea283;--color-accent-800:#f6d6c6;--color-accent-900:#fbe6db;--shadow-sm:0 0 0 1px #e0d9cc;--shadow-md:0 0 0 1px #d6cfc1,0 10px 28px rgba(60,40,20,.10);--shadow-lg:0 0 0 1px #c8c0b0,0 18px 44px rgba(60,40,20,.14);--page-bg:#f4f1ea}
+[data-theme="terminal"]{--color-bg:#0b0f0c;--color-surface:#121914;--color-text:#d9f2dd;--color-accent:#3ddc84;--color-divider:color-mix(in srgb,#d9f2dd 13%,transparent);--color-neutral-100:#eef7f0;--color-neutral-200:#d6e6da;--color-neutral-300:#b9cdbf;--color-neutral-400:#97ad9d;--color-neutral-500:#768c7c;--color-neutral-600:#5a6e60;--color-neutral-700:#415146;--color-neutral-800:#2b372f;--color-neutral-900:#1a221c;--color-accent-100:#e3fcec;--color-accent-200:#bdf7d3;--color-accent-300:#8cefb4;--color-accent-400:#5fe69a;--color-accent-500:#3ddc84;--color-accent-600:#2bb36a;--color-accent-700:#1f8550;--color-accent-800:#175c39;--color-accent-900:#0f3824;--shadow-sm:0 0 0 1px #2b372f;--shadow-md:0 0 0 1px #415146,0 6px 18px rgba(0,0,0,.6);--shadow-lg:0 0 0 1px #5a6e60,0 16px 40px rgba(0,0,0,.7);--page-bg:radial-gradient(ellipse 80% 50% at 15% 0%,#12281c,transparent 60%),#0b0f0c}
+[data-theme="ember"]{--color-bg:#1a1210;--color-surface:#261b18;--color-text:#f3e7df;--color-accent:#ff9a4d;--color-divider:color-mix(in srgb,#f3e7df 14%,transparent);--color-neutral-100:#fbf1ea;--color-neutral-200:#efdfd4;--color-neutral-300:#dcc6b8;--color-neutral-400:#bfa596;--color-neutral-500:#9d8375;--color-neutral-600:#7c6458;--color-neutral-700:#5b4940;--color-neutral-800:#3e312b;--color-neutral-900:#2a201c;--color-accent-100:#fff1e5;--color-accent-200:#ffdcc2;--color-accent-300:#ffc08f;--color-accent-400:#ffab6a;--color-accent-500:#ff9a4d;--color-accent-600:#e07a2e;--color-accent-700:#a8561d;--color-accent-800:#6e3814;--color-accent-900:#40220e;--shadow-sm:0 0 0 1px #3e312b;--shadow-md:0 0 0 1px #5b4940,0 6px 18px rgba(0,0,0,.55);--shadow-lg:0 0 0 1px #7c6458,0 16px 40px rgba(0,0,0,.65);--page-bg:radial-gradient(ellipse 80% 55% at 90% 0%,rgba(170,40,70,.38),transparent 60%),radial-gradient(ellipse 70% 50% at 0% 45%,rgba(255,140,60,.14),transparent 60%),#1a1210}
+[data-theme="aurora"]{--color-bg:#0c1224;--color-surface:#151c33;--color-text:#e6f0ff;--color-accent:#5ee6d0;--color-divider:color-mix(in srgb,#e6f0ff 14%,transparent);--color-neutral-100:#f0f4ff;--color-neutral-200:#dce4f5;--color-neutral-300:#c0cbe3;--color-neutral-400:#9eabc8;--color-neutral-500:#7d8aa8;--color-neutral-600:#5f6b88;--color-neutral-700:#444f69;--color-neutral-800:#2d364d;--color-neutral-900:#1c2338;--color-accent-100:#e0fbf6;--color-accent-200:#b6f4ea;--color-accent-300:#8aeedd;--color-accent-400:#6fe9d5;--color-accent-500:#5ee6d0;--color-accent-600:#3cbfab;--color-accent-700:#2a8c7e;--color-accent-800:#1c5e55;--color-accent-900:#123a35;--shadow-sm:0 0 0 1px #2d364d;--shadow-md:0 0 0 1px #444f69,0 6px 18px rgba(0,0,0,.55);--shadow-lg:0 0 0 1px #5f6b88,0 16px 40px rgba(0,0,0,.65);--page-bg:radial-gradient(ellipse 70% 50% at 80% 0%,rgba(120,80,255,.32),transparent 60%),radial-gradient(ellipse 60% 50% at 5% 30%,rgba(40,200,190,.18),transparent 60%),radial-gradient(ellipse 80% 60% at 50% 100%,rgba(200,60,200,.16),transparent 60%),#0c1224}
+[data-theme="bloom"]{--color-bg:#faf6fb;--color-surface:#fffcfe;--color-text:#221a2e;--color-accent:#7d2ff0;--color-divider:color-mix(in srgb,#221a2e 13%,transparent);--color-neutral-100:#221a2e;--color-neutral-200:#342a42;--color-neutral-300:#4b405a;--color-neutral-400:#5f546e;--color-neutral-500:#7a6f89;--color-neutral-600:#a197ae;--color-neutral-700:#c0b8cb;--color-neutral-800:#e6e0ee;--color-neutral-900:#f0ecf4;--color-accent-100:#2b0a5c;--color-accent-200:#420f8a;--color-accent-300:#5d1bc4;--color-accent-400:#6a22dc;--color-accent-500:#7d2ff0;--color-accent-600:#a36bff;--color-accent-700:#c19cff;--color-accent-800:#e6d8ff;--color-accent-900:#f0e6ff;--shadow-sm:0 0 0 1px #e6e0ee;--shadow-md:0 0 0 1px #ddd5e8,0 12px 32px rgba(80,40,120,.10);--shadow-lg:0 0 0 1px #cfc5dd,0 20px 48px rgba(80,40,120,.14);--page-bg:radial-gradient(ellipse 70% 45% at 95% 0%,rgba(255,170,205,.55),transparent 60%),radial-gradient(ellipse 60% 45% at 0% 22%,rgba(180,160,255,.45),transparent 60%),radial-gradient(ellipse 70% 45% at 60% 75%,rgba(255,215,165,.40),transparent 60%),#faf6fb}
+@keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--color-accent) 60%,transparent)}100%{box-shadow:0 0 0 10px transparent}}
+@keyframes drift1{from{transform:translate(0,0) scale(1)}to{transform:translate(-9vw,8vh) scale(1.18)}}
+@keyframes drift2{from{transform:translate(0,0) scale(1.08)}to{transform:translate(11vw,-7vh) scale(.9)}}
+[data-theme="nocturne"]{--scene-wash:var(--color-section,#262a60)}
+[data-theme="paper"]{--scene-wash:#f0dccd}
+[data-theme="terminal"]{--scene-wash:#0f2e1d}
+[data-theme="ember"]{--scene-wash:#3d1a12}
+[data-theme="aurora"]{--scene-wash:#0f2c44}
+[data-theme="bloom"]{--scene-wash:#ebdcff}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" data-theme="{{ theme }}" style="position:relative;min-height:100vh;background:var(--page-bg,var(--color-bg));background-attachment:fixed;transition:color .4s;color:var(--color-text);font-family:var(--font-body);overflow-x:clip">
+
+<div ref="{{ barRef }}" style="position:fixed;top:0;left:0;right:0;height:2px;z-index:30;background:var(--color-accent);box-shadow:0 0 12px var(--color-accent);transform-origin:0 50%;transform:scaleX(0)"></div>
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden">
+  <div ref="{{ washRef }}" style="position:absolute;inset:0;background:var(--scene-wash,var(--color-section));opacity:0"></div>
+  <div ref="{{ orb1Ref }}" style="position:absolute;left:0;top:0;width:64vmax;height:64vmax;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent) 34%,transparent),transparent);opacity:0;will-change:transform,opacity"></div>
+  <div ref="{{ orb2Ref }}" style="position:absolute;left:0;top:0;width:64vmax;height:64vmax;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent-600) 26%,transparent),transparent);opacity:0;will-change:transform,opacity"></div>
+  <div ref="{{ orb3Ref }}" style="position:absolute;left:0;top:0;width:64vmax;height:64vmax;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent-300) 20%,transparent),transparent);opacity:0;will-change:transform,opacity"></div>
+</div>
+<div ref="{{ stageRef }}" aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:var(--page-bg,var(--color-bg));will-change:clip-path,transform">
+  <div style="position:absolute;width:72vmax;height:72vmax;right:-26vmax;top:-34vmax;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent) 22%,transparent),transparent);animation:drift1 24s ease-in-out infinite alternate"></div>
+  <div style="position:absolute;width:62vmax;height:62vmax;left:-28vmax;top:24vh;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent-700) 30%,transparent),transparent);animation:drift2 30s ease-in-out infinite alternate"></div>
+  <canvas ref="{{ fieldRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 130% 100% at 50% 32%,transparent 58%,color-mix(in srgb,var(--color-bg) 78%,transparent))"></div>
+</div>
+<div ref="{{ frameRef }}" aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;box-shadow:var(--shadow-lg);opacity:0"></div>
+<div ref="{{ grainRef }}" aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-size:160px 160px"></div>
+<div ref="{{ glowRef }}" style="position:fixed;left:0;top:0;width:640px;height:640px;border-radius:50%;pointer-events:none;z-index:0;opacity:{{ glowOpacity }};background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent);transform:translate(-9999px,0);transition:opacity .4s"></div>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:20;background:color-mix(in srgb,var(--color-bg) 78%,transparent);backdrop-filter:blur(14px)">
+  <nav class="nav" style="max-width:1160px;margin:0 auto;padding:14px 24px;flex-wrap:wrap;font-family:'JetBrains Mono',ui-monospace,monospace">
+    <a href="#top" class="nav-brand" style="display:flex;align-items:center;gap:10px;font-size:14px;font-family:'JetBrains Mono',ui-monospace,monospace">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent);animation:pulse 1.8s ease-out infinite"></span>
+      ~/{{ handle }}
+    </a>
+    <a href="#about" style="font-size:13px"><span style="color:var(--color-accent)">01.</span> about</a>
+    <a href="#services" style="font-size:13px"><span style="color:var(--color-accent)">02.</span> services</a>
+    <a href="#work" style="font-size:13px"><span style="color:var(--color-accent)">03.</span> work</a>
+    <a href="#contact" style="font-size:13px"><span style="color:var(--color-accent)">04.</span> contact</a>
+    <button onClick="{{ toggleMode }}" aria-label="{{ modeLabel }}" title="{{ modeLabel }}" style="width:32px;height:32px;padding:0;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;font-size:16px;color:var(--color-text);background:transparent;box-shadow:0 0 0 1px var(--color-divider);transition:color .2s,box-shadow .2s" style-hover="color:var(--color-accent);box-shadow:0 0 0 1px var(--color-accent)"><i class="ph ph-sun" style="display:{{ sunDisplay }}"></i><i class="ph ph-moon" style="display:{{ moonDisplay }}"></i></button>
+  </nav>
+</header>
+
+<div data-scene="hero" style="position:relative;z-index:1;height:180vh">
+<section id="top" data-screen-label="Hero" style="position:sticky;top:0;height:100svh;overflow:hidden">
+<div ref="{{ heroRef }}" style="height:100%;display:flex;flex-direction:column;transform-origin:50% 45%;will-change:transform,opacity">
+  <div style="position:relative;flex:1;width:100%;box-sizing:border-box;max-width:1160px;margin:0 auto;padding:96px 24px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:64px;align-items:center;align-content:center">
+    <div style="max-width:640px">
+      <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;margin-bottom:28px">
+        <span style="color:var(--color-neutral-600)">~ $</span>
+        <span data-type="" style="color:var(--color-accent-300)">whoami</span>
+        <span style="width:8px;height:16px;background:var(--color-accent);animation:blink 1s infinite"></span>
+      </div>
+      <h1 style="font-size:clamp(52px,8.5vw,112px);line-height:.96;letter-spacing:-0.045em;margin:0 0 28px;display:flex;flex-wrap:wrap;column-gap:.25em">
+        <sc-for list="{{ nameWords }}" as="w" hint-placeholder-count="2">
+          <span style="display:inline-flex;white-space:nowrap">
+            <sc-for list="{{ w.letters }}" as="l" hint-placeholder-count="4">
+              <span data-reveal="up" data-scramble="" data-delay="{{ l.d }}" style="display:inline-block">{{ l.c }}</span>
+            </sc-for>
+          </span>
+        </sc-for>
+      </h1>
+      <p data-reveal="up" data-delay="700" style="font-size:20px;line-height:1.5;color:var(--color-neutral-300);max-width:540px;margin:0 0 12px;text-wrap:pretty">{{ role }} building</p>
+      <p data-reveal="up" data-delay="800" style="font-size:20px;line-height:1.5;margin:0 0 36px;min-height:30px;font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--color-accent-300)"><span ref="{{ rotRef }}">scalable backends.</span><span style="display:inline-block;width:2px;height:22px;margin-left:3px;vertical-align:-4px;background:var(--color-accent);animation:blink 1s infinite"></span></p>
+      <div data-reveal="up" data-delay="950" style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="#work" class="btn btn-primary" style="padding:11px 20px">View projects <i class="ph ph-arrow-down-right"></i></a>
+        <a href="#contact" class="btn btn-secondary" style="padding:11px 20px">Get in touch</a>
+      </div>
+    </div>
+    <div data-reveal="scale" data-delay="500" style="display:{{ cardDisplay }};justify-self:end;width:100%;max-width:440px">
+      <div style="animation:float 6s ease-in-out infinite">
+        <div ref="{{ tiltRef }}" class="elev-md" style="background:color-mix(in srgb,var(--color-surface) 88%,transparent);backdrop-filter:blur(8px);border-radius:var(--radius-lg);padding:20px 22px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;line-height:1.9;transition:transform .25s ease-out;will-change:transform">
+          <div style="display:flex;gap:6px;align-items:center;margin-bottom:14px">
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--color-neutral-700)"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--color-neutral-700)"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--color-neutral-700)"></span>
+            <span style="margin-left:auto;font-size:11px;color:var(--color-neutral-500)">profile.json</span>
+          </div>
+          <div data-reveal="left" data-delay="900" style="color:var(--color-neutral-500)">{</div>
+          <div data-reveal="left" data-delay="1000" style="padding-left:18px"><span style="color:var(--color-accent-300)">"role"</span>: <span style="color:var(--color-neutral-200)">"full-stack dev"</span>,</div>
+          <div data-reveal="left" data-delay="1100" style="padding-left:18px"><span style="color:var(--color-accent-300)">"stack"</span>: <span style="color:var(--color-neutral-200)">["TypeScript", "Node", "Postgres"]</span>,</div>
+          <div data-reveal="left" data-delay="1200" style="padding-left:18px"><span style="color:var(--color-accent-300)">"focus"</span>: <span style="color:var(--color-neutral-200)">"web &amp; mobile apps"</span>,</div>
+          <div data-reveal="left" data-delay="1300" style="padding-left:18px"><span style="color:var(--color-accent-300)">"available"</span>: <span style="color:var(--color-accent)">true</span></div>
+          <div data-reveal="left" data-delay="1400" style="color:var(--color-neutral-500)">}</div>
+          <div data-reveal="left" data-delay="1600" style="color:var(--color-neutral-600);margin-top:6px">// building real tools</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;overflow:hidden;padding:18px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)">
+    <div style="display:flex;width:max-content;animation:marquee 38s linear infinite">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+        <span style="display:flex;align-items:center;gap:28px;padding-right:28px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;color:var(--color-neutral-500);white-space:nowrap">{{ m }}<span style="width:4px;height:4px;border-radius:50%;background:var(--color-accent-700)"></span></span>
+      </sc-for>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<section data-scene="statement" data-screen-label="Statement" style="position:relative;z-index:1;height:250vh">
+  <div style="position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center">
+    <div style="width:100%;max-width:1160px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+      <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;margin-bottom:28px"><span style="color:var(--color-neutral-600)">~ $</span><span data-type="" style="color:var(--color-accent-300)">cat manifesto.md</span><span style="width:7px;height:14px;background:var(--color-accent);animation:blink 1s infinite"></span></div>
+      <p ref="{{ stmtRef }}" style="margin:0;max-width:1040px;display:flex;flex-wrap:wrap;column-gap:.24em;row-gap:.04em;font-size:clamp(34px,5.6vw,80px);line-height:1.06;letter-spacing:-0.035em;font-weight:500">
+        <sc-for list="{{ statementWords }}" as="w" hint-placeholder-count="14">
+          <span data-w="" style="opacity:.14;color:{{ w.c }}">{{ w.t }}</span>
+        </sc-for>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section data-scene="stats" data-screen-label="Stats" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:96px 24px">
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent) no-repeat top / 100% 1px,linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent) no-repeat bottom / 100% 1px">
+    <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+      <div data-reveal="up" data-delay="{{ s.d }}" style="position:relative;padding:36px 28px 36px 0;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--color-neutral-500)"><span style="width:14px;height:2px;background:var(--color-accent);box-shadow:0 0 8px var(--color-accent)"></span>{{ s.key }}</div>
+        <div style="font-size:clamp(48px,6vw,64px);font-weight:500;letter-spacing:-0.04em;line-height:1;background:linear-gradient(180deg,var(--color-text),var(--color-neutral-500));-webkit-background-clip:text;background-clip:text;color:transparent"><span data-count="{{ s.value }}">{{ s.value }}</span><span style="color:var(--color-accent);-webkit-text-fill-color:var(--color-accent)">{{ s.suffix }}</span></div>
+        <div style="font-size:14px;color:var(--color-neutral-400)">{{ s.label }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="about" data-scene="about" data-screen-label="About" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:128px 24px 0">
+  <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;margin-bottom:18px"><span style="color:var(--color-neutral-600)">~ $</span><span data-type="" style="color:var(--color-accent-300)">cat about.md</span><span style="width:7px;height:14px;background:var(--color-accent);animation:blink 1s infinite"></span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:64px;align-items:start">
+    <div data-reveal="up" style="position:relative;max-width:420px;width:100%;aspect-ratio:4/5">
+      <div style="position:absolute;inset:-1px;border-radius:var(--radius-lg);background:linear-gradient(160deg,var(--color-accent-600),transparent 55%)"></div>
+      <div style="position:absolute;inset:1px;border-radius:calc(var(--radius-lg) - 1px);overflow:hidden;background:var(--color-surface)">
+        <image-slot id="portrait" shape="rect" alt="Portrait of {{ name }}"></image-slot>
+      </div>
+    </div>
+    <div style="max-width:560px">
+      <h2 data-reveal="up" style="font-size:40px;letter-spacing:-0.03em;margin:0 0 24px">The short version</h2>
+      <p data-reveal="up" data-delay="100" style="font-size:16px;line-height:1.75;color:var(--color-neutral-300);text-wrap:pretty">A sentence or two on who you are and what you build. Lead with the work you want more of — APIs, product engineering, mobile apps, whatever it is.</p>
+      <p data-reveal="up" data-delay="200" style="font-size:16px;line-height:1.75;color:var(--color-neutral-300);text-wrap:pretty;margin-bottom:40px">Then what you're exploring right now, and what kind of projects or teams you'd like to hear from.</p>
+      <div data-reveal="up" data-delay="300" style="display:grid;grid-template-columns:auto 1fr;gap:14px 32px;font-size:14px">
+        <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">location</span><span>{{ location }}</span>
+        <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">email</span><a href="mailto:{{ email }}" style="text-decoration:none">{{ email }}</a>
+        <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">status</span><span style="display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse 1.8s ease-out infinite"></span>Open to freelance &amp; full-time</span>
+        <span style="color:var(--color-neutral-500);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px">elsewhere</span>
+        <span style="display:flex;gap:18px;flex-wrap:wrap">
+          <a href="#" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px"><i class="ph ph-github-logo"></i>GitHub</a>
+          <a href="#" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px"><i class="ph ph-linkedin-logo"></i>LinkedIn</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" data-scene="services" data-screen-label="Services" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:144px 24px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:64px;align-items:center">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;margin-bottom:18px"><span style="color:var(--color-neutral-600)">~ $</span><span data-type="" style="color:var(--color-accent-300)">ls ./services</span><span style="width:7px;height:14px;background:var(--color-accent);animation:blink 1s infinite"></span></div>
+      <h2 data-reveal="up" style="font-size:40px;letter-spacing:-0.03em;margin:0 0 20px;max-width:460px">What I can build for you</h2>
+      <p data-reveal="up" data-delay="100" style="font-size:16px;line-height:1.7;color:var(--color-neutral-400);max-width:420px;margin:0 0 32px">Drag or swipe the cards to flip through the stack.</p>
+      <div data-reveal="up" data-delay="200" style="display:flex;align-items:center;gap:14px">
+        <button class="btn btn-secondary btn-icon" onClick="{{ prevSvc }}" aria-label="Previous"><i class="ph ph-arrow-left"></i></button>
+        <button class="btn btn-secondary btn-icon" onClick="{{ nextSvc }}" aria-label="Next"><i class="ph ph-arrow-right"></i></button>
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:var(--color-neutral-500)"><span style="color:var(--color-text)">{{ svcNum }}</span> / {{ svcTotal }}</span>
+      </div>
+      <div data-reveal="up" data-delay="260" style="display:flex;gap:6px;margin-top:20px">
+        <sc-for list="{{ svcDots }}" as="d" hint-placeholder-count="6">
+          <span onClick="{{ d.go }}" style="height:3px;width:{{ d.w }};border-radius:2px;background:{{ d.bg }};cursor:pointer;transition:width .4s,background .4s"></span>
+        </sc-for>
+      </div>
+    </div>
+    <div data-reveal="up" data-delay="150" style="position:relative;height:380px;max-width:480px;width:100%">
+      <sc-for list="{{ svcCards }}" as="s" hint-placeholder-count="6">
+        <div onPointerDown="{{ s.down }}" onPointerMove="{{ onDragMove }}" onPointerUp="{{ onDragEnd }}" onPointerCancel="{{ onDragEnd }}" style="position:absolute;left:0;top:0;right:48px;bottom:48px;touch-action:pan-y;user-select:none;cursor:{{ s.cursor }};z-index:{{ s.z }};opacity:{{ s.op }};transform:{{ s.tf }};transition:{{ s.tr }};background:var(--color-surface);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:28px;display:flex;flex-direction:column;gap:14px;overflow:hidden">
+          <div style="position:absolute;right:-80px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--color-accent) 18%,transparent),transparent);pointer-events:none"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-300)"><span>{{ s.kicker }}</span><span style="color:var(--color-neutral-500)">[{{ s.n }} / {{ svcTotal }}]</span></div>
+          <i class="{{ s.icon }}" style="font-size:30px;color:var(--color-accent);margin-top:8px"></i>
+          <h3 style="font-size:24px;margin:0">{{ s.title }}</h3>
+          <p style="font-size:14px;line-height:1.65;color:var(--color-neutral-400);margin:0;flex:1;text-wrap:pretty">{{ s.body }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <sc-for list="{{ s.tags }}" as="t" hint-placeholder-count="4"><span class="tag tag-neutral">{{ t }}</span></sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="work" data-scene="work" data-screen-label="Work" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:144px 24px 0">
+  <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;margin-bottom:18px"><span style="color:var(--color-neutral-600)">~ $</span><span data-type="" style="color:var(--color-accent-300)">git log --projects</span><span style="width:7px;height:14px;background:var(--color-accent);animation:blink 1s infinite"></span></div>
+      <h2 data-reveal="up" style="font-size:40px;letter-spacing:-0.03em;margin:0">Featured work</h2>
+    </div>
+    <div data-reveal="up" data-delay="100" class="seg" role="radiogroup" aria-label="Filter projects" style="flex-wrap:wrap">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+        <label class="seg-opt">
+          <input type="radio" name="cat" checked="{{ f.checked }}" onChange="{{ f.pick }}">
+          {{ f.label }} <span style="color:var(--color-neutral-600);font-size:11px">{{ f.count }}</span>
+        </label>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:28px">
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+      <div data-reveal="up" data-delay="{{ p.d }}">
+        <article style="display:flex;flex-direction:column;gap:16px;padding:10px 10px 20px;border-radius:calc(var(--radius-lg) + 4px);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s,box-shadow .35s" style-hover="transform:translateY(-6px);background:var(--color-surface);box-shadow:var(--shadow-md)">
+          <div style="aspect-ratio:16/10;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-surface);box-shadow:var(--shadow-sm)">
+            <image-slot id="{{ p.slot }}" shape="rect" alt="{{ p.name }} screenshot"></image-slot>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:0 6px">
+            <span class="{{ p.tagClass }}">{{ p.status }}</span>
+            <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--color-neutral-500)">{{ p.cat }} · {{ p.year }}</span>
+          </div>
+          <div style="padding:0 6px">
+            <h3 style="font-size:21px;margin:0 0 8px;display:flex;align-items:center;gap:8px">{{ p.name }} <i class="ph ph-arrow-up-right" style="font-size:16px;color:var(--color-accent)"></i></h3>
+            <p style="font-size:14px;line-height:1.6;color:var(--color-neutral-400);margin:0 0 14px;text-wrap:pretty">{{ p.desc }}</p>
+            <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--color-neutral-500)">{{ p.stack }}</div>
+          </div>
+        </article>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="skills" data-scene="skills" data-screen-label="Skills" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:144px 24px 0">
+  <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;margin-bottom:18px"><span style="color:var(--color-neutral-600)">~ $</span><span data-type="" style="color:var(--color-accent-300)">cat skills.txt</span><span style="width:7px;height:14px;background:var(--color-accent);animation:blink 1s infinite"></span></div>
+  <h2 data-reveal="up" style="font-size:40px;letter-spacing:-0.03em;margin:0 0 48px">Tools of the trade</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px">
+    <sc-for list="{{ skills }}" as="k" hint-placeholder-count="6">
+      <div data-reveal="up" data-delay="{{ k.d }}">
+        <div style="height:100%;padding:22px;border-radius:var(--radius-lg);background:color-mix(in srgb,var(--color-surface) 60%,transparent);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:14px;transition:box-shadow .3s,background .3s" style-hover="box-shadow:0 0 0 1px var(--color-accent-600), 0 0 32px color-mix(in srgb,var(--color-accent) 18%,transparent);background:var(--color-surface)">
+          <div style="display:flex;align-items:center;gap:10px"><i class="{{ k.icon }}" style="font-size:20px;color:var(--color-accent)"></i><span style="font-size:15px;font-weight:500">{{ k.group }}</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <sc-for list="{{ k.items }}" as="t" hint-placeholder-count="3"><span class="tag tag-neutral">{{ t }}</span></sc-for>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="contact" data-scene="contact" data-screen-label="Contact" style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:160px 24px 96px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:64px">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;margin-bottom:18px"><span style="color:var(--color-neutral-600)">~ $</span><span data-type="" style="color:var(--color-accent-300)">contact.init()</span><span style="width:7px;height:14px;background:var(--color-accent);animation:blink 1s infinite"></span></div>
+      <h2 data-reveal="up" style="font-size:clamp(40px,5.5vw,64px);letter-spacing:-0.035em;line-height:1.02;margin:0 0 24px">Let's build something.</h2>
+      <p data-reveal="up" data-delay="100" style="font-size:16px;color:var(--color-neutral-400);max-width:420px;margin:0 0 32px;line-height:1.7">Freelance work, a full-time role, or an idea you want to sanity-check — my inbox is open.</p>
+      <a data-reveal="up" data-delay="200" href="mailto:{{ email }}" style="font-size:22px;text-decoration:none;display:inline-flex;align-items:center;gap:10px">{{ email }} <i class="ph ph-arrow-up-right"></i></a>
+    </div>
+    <div data-reveal="up" data-delay="150">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" class="elev-sm" style="display:flex;flex-direction:column;gap:16px;background:var(--color-surface);border-radius:var(--radius-lg);padding:28px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+            <div class="field"><label for="n">Name</label><input id="n" class="input" required></div>
+            <div class="field"><label for="e">Email</label><input id="e" type="email" class="input" required></div>
+          </div>
+          <div class="field"><label for="m">Message</label><textarea id="m" class="input" style="min-height:140px" required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;padding:11px 20px">Send message <i class="ph ph-paper-plane-right"></i></button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ sent }}">
+        <div class="elev-sm" style="background:var(--color-surface);border-radius:var(--radius-lg);padding:28px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;line-height:1.9">
+          <div style="color:var(--color-neutral-500)">$ send --message</div>
+          <div style="color:var(--color-accent-300)">✓ delivered</div>
+          <div style="color:var(--color-neutral-400)">Thanks — I'll reply within a day or two.</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<footer style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:32px 24px 48px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--color-neutral-500);background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent) no-repeat top / 100% 1px">
+  <span>© 2026 {{ name }}</span>
+  <a href="#top" style="color:inherit;text-decoration:none">back to top ↑</a>
+</footer>
+
+<sc-if value="{{ introShow }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="Intro" onClick="{{ skipIntro }}" style="position:fixed;inset:0;z-index:100;background:var(--page-bg,var(--color-bg));cursor:pointer;clip-path:{{ introClip }};transition:clip-path 1.1s cubic-bezier(.76,0,.24,1)">
+    <div style="height:100%;max-width:1160px;margin:0 auto;padding:18px 24px 44px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;font-family:'JetBrains Mono',ui-monospace,monospace;transform:{{ introShift }};transition:transform 1.1s cubic-bezier(.76,0,.24,1)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px">
+        <span style="display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent);animation:pulse 1.8s ease-out infinite"></span>~/{{ handle }}</span>
+        <span style="font-size:12px;color:var(--color-neutral-500)">click or press any key to skip</span>
+      </div>
+      <div>
+        <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:132px;font-size:13px">
+          <sc-for list="{{ introLines }}" as="l" hint-placeholder-count="0">
+            <div style="display:flex;gap:14px"><span style="min-width:36px;color:{{ l.color }}">{{ l.tag }}</span><span style="color:var(--color-neutral-300)">{{ l.text }}</span></div>
+          </sc-for>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-top:28px;font-family:var(--font-heading);font-weight:500;line-height:.82;font-variant-numeric:tabular-nums">
+          <span ref="{{ introNumRef }}" style="font-size:clamp(96px,18vw,248px);letter-spacing:-0.06em">000</span>
+          <span style="font-size:clamp(28px,4vw,56px);color:var(--color-accent)">%</span>
+        </div>
+        <div style="position:relative;height:1px;margin-top:32px;background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent)">
+          <div ref="{{ introBarRef }}" style="position:absolute;inset:0;background:linear-gradient(to right,transparent,var(--color-accent) 48px);box-shadow:0 0 16px var(--color-accent);transform-origin:0 50%;transform:scaleX(0);transition:transform .12s linear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Neil Villarey&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;role&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Full-stack developer&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@yourname.dev&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;location&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;City, Country&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;statement&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;I build *real tools* — fast, accessible web apps, APIs that don't fall over, and mobile apps people actually use.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;nocturne&quot;,&quot;bloom&quot;],&quot;default&quot;:&quot;nocturne&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;cursorGlow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;intro&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;always&quot;,&quot;once per session&quot;,&quot;off&quot;],&quot;default&quot;:&quot;always&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:1.6,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Background&quot;},&quot;flow&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Background&quot;}}">
+const PHRASES = ['scalable backends.', 'fast, accessible web apps.', 'APIs that don\'t fall over.', 'mobile apps people actually use.'];
+
+const SERVICES = [
+  ['Web, mobile & SaaS', 'Full-stack web development', 'Responsive, scalable apps with modern frameworks — landing pages to complex dashboards.', 'ph ph-browsers', ['React', 'Next.js', 'TypeScript', 'Tailwind']],
+  ['REST, GraphQL & servers', 'Backend APIs & microservices', 'Systems that handle real traffic and messy business logic, built for security and maintainability.', 'ph ph-graph', ['Node', 'Express', 'GraphQL', 'REST']],
+  ['SQL + NoSQL', 'Database design', 'Efficient schemas, complex queries, slow-query fixes and caching strategies.', 'ph ph-database', ['PostgreSQL', 'Redis', 'MongoDB']],
+  ['Fast & reliable', 'Performance & monitoring', 'Audits, bottleneck hunting, and the logging and alerting that keep production honest.', 'ph ph-gauge', ['Lighthouse', 'Grafana', 'Prometheus']],
+  ['iOS & Android', 'Mobile app development', 'Cross-platform apps with a native feel, offline support and smooth releases to both app stores.', 'ph ph-device-mobile', ['React Native', 'Expo', 'SQLite']],
+  ['Secure deployments', 'Security & DevOps', 'Hardened defaults and CI/CD pipelines that make releases boring.', 'ph ph-shield-check', ['Docker', 'Kubernetes', 'GitHub Actions']],
+].map(([kicker, title, body, icon, tags], i) => ({ kicker, title, body, icon, tags, n: String(i + 1).padStart(2, '0') }));
+
+const PROJECTS = [
+  ['Atlas', 'Web', 'Live', '2026', 'Replace with a one-line pitch: what it does and who it\'s for.', 'Next.js · Postgres'],
+  ['Relay', 'API', 'Live', '2026', 'A realtime messaging service — describe the hard problem you solved.', 'Node · Redis · WebSockets'],
+  ['Beacon', 'Mobile', 'WIP', '2025', 'Mobile app project — mention the platform and the problem it solves.', 'React Native · Expo · SQLite'],
+  ['Lens', 'AI/ML', 'Done', '2025', 'Computer-vision pipeline — note the model and the accuracy you reached.', 'Python · PyTorch · Flask'],
+  ['Ledger', 'Web', 'Live', '2024', 'Local-first finance app — highlight the architecture choice.', 'React · IndexedDB'],
+  ['Harbor', 'API', 'Archived', '2023', 'Internal tooling or an older project worth keeping on the list.', 'Spring Boot · MySQL'],
+].map(([name, cat, status, year, desc, stack], i) => ({ name, cat, status, year, desc, stack, slot: 'project-' + name.toLowerCase(),
+  tagClass: 'tag ' + (status === 'Live' ? 'tag-accent' : status === 'WIP' ? 'tag-outline' : 'tag-neutral') }));
+
+const SKILLS = [
+  ['Backend', 'ph ph-hard-drives', ['Node', 'Express', 'Java', 'Spring Boot']],
+  ['Frontend', 'ph ph-layout', ['React', 'TypeScript', 'Angular']],
+  ['Data', 'ph ph-database', ['PostgreSQL', 'Redis', 'MongoDB']],
+  ['AI / ML', 'ph ph-brain', ['Python', 'PyTorch', 'TensorFlow']],
+  ['Mobile', 'ph ph-device-mobile', ['React Native', 'Expo', 'SQLite']],
+  ['DevOps', 'ph ph-cloud', ['Docker', 'CI/CD', 'AWS', 'Linux']],
+].map(([group, icon, items], i) => ({ group, icon, items, d: (i % 3) * 90 }));
+
+const STATS = [[5, '+', 'years building software', 'experience'], [30, '+', 'projects shipped', 'projects'], [12, '', 'happy clients', 'clients']]
+  .map(([value, suffix, label, key], i) => ({ value, suffix, label, key: '// ' + key, d: i * 120 }));
+
+const MARQUEE = ['TypeScript', 'React', 'Node', 'React Native', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Python', 'Expo', 'GraphQL', 'AWS'];
+const CATS = ['All', 'Web', 'Mobile', 'API', 'AI/ML'];
+const EASE = 'cubic-bezier(.2,.75,.2,1)';
+const bootLines = (handle, theme) => [
+  ['~ $', `ssh guest@${handle}.dev`, 'var(--color-neutral-500)'],
+  ['[ok]', `fetched ${PROJECTS.length} projects`, 'var(--color-accent)'],
+  ['[ok]', 'particle field compiled', 'var(--color-accent)'],
+  ['[ok]', `theme → ${theme}`, 'var(--color-accent)'],
+  ['→', 'welcome in.', 'var(--color-accent-300)'],
+].map(([tag, text, color]) => ({ tag, text, color }));
+const STATEMENT = 'I build *real tools* — fast, accessible web apps, APIs that don\'t fall over, and mobile apps people actually use.';
+const parseStatement = s => { let on = false; return String(s || '').split(/\s+/).filter(Boolean).map(w => {
+  if (w[0] === '*') on = true;
+  const c = on ? 'var(--color-accent)' : 'var(--color-text)';
+  if (w.length > 1 && w.slice(1).includes('*')) on = false;
+  return { t: w.replace(/\*/g, ''), c };
+}); };
+const CAM_HERO = { hy: .56, hc: 1, fa: 1, amp: 1 }, CAM_END = { hy: .5, hc: 1.1, fa: 1, amp: 1 };
+const clamp01 = v => v < 0 ? 0 : v > 1 ? 1 : v;
+const sstep = (a, b, v) => { const t = clamp01((v - a) / (b - a)); return t * t * (3 - 2 * t); };
+const mix = (a, b, t) => a + (b - a) * t;
+const easeIO = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+// Scroll-scrubbed lighting per chapter: [scene, anchor (0 = pin start, 1 = pin end, .5 = centered), { wash, orbs: [x vw, y vh, scale, alpha] }]
+const SCENES = [
+  ['hero', 0, { wash: 0, o: [[50, 120, .6, 0], [85, 30, .6, 0], [15, 70, .6, 0]] }],
+  ['statement', 0, { wash: 0, o: [[10, 58, 1.1, .55], [90, 28, .7, .25], [50, 115, 1.2, 0]] }],
+  ['statement', 1, { wash: 0, o: [[84, 48, 1.25, .6], [14, 78, .8, .28], [50, 112, 1.3, .18]] }],
+  ['stats', .5, { wash: 1, o: [[50, 118, 1.8, .6], [8, -8, .9, .3], [94, 18, .7, .22]] }],
+  ['about', .5, { wash: 0, o: [[20, 42, 1, .4], [88, 88, .7, .2], [55, 115, 1, 0]] }],
+  ['services', .5, { wash: 0, o: [[74, 52, 1.15, .5], [16, 16, .6, .16], [40, 104, 1, .1]] }],
+  ['work', .5, { wash: 0, o: [[50, -20, 2, .38], [4, 72, .8, .14], [96, 72, .8, .14]] }],
+  ['skills', .5, { wash: 0, o: [[82, 30, 1, .32], [18, 82, .8, .2], [50, 115, 1, 0]] }],
+  ['contact', .5, { wash: 0, o: [[50, 125, 1.4, .15], [8, 18, .6, 0], [92, 18, .6, 0]] }],
+];
+
+class Component extends DCLogic {
+  state = { cat: 'All', svc: 0, dx: 0, drag: false, sent: false, intro: this.introMode() ? 'run' : 'done', introStep: 0, narrow: typeof innerWidth === 'number' && innerWidth < 760 };
+  rootRef = React.createRef(); glowRef = React.createRef(); barRef = React.createRef(); tiltRef = React.createRef(); rotRef = React.createRef();
+  fieldRef = React.createRef(); grainRef = React.createRef(); introNumRef = React.createRef(); introBarRef = React.createRef();
+  stageRef = React.createRef(); frameRef = React.createRef(); washRef = React.createRef(); orb1Ref = React.createRef(); orb2Ref = React.createRef(); orb3Ref = React.createRef(); heroRef = React.createRef(); stmtRef = React.createRef();
+  cam = CAM_HERO;
+  timers = [];
+
+  motion() { return !new URLSearchParams(location.search).has('embed') && !matchMedia('(prefers-reduced-motion: reduce)').matches && ((this.props || {}).motion ?? true); }
+  introMode() {
+    const p = this.props || {}, m = p.intro ?? 'always';
+    if (new URLSearchParams(location.search).has('embed') || !this.motion() || m === 'off') return false;
+    if (m === 'once per session') { try { if (sessionStorage.getItem('pt-intro')) return false; } catch (_) {} }
+    return true;
+  }
+  later(fn, ms) { const t = setTimeout(fn, ms); this.timers.push(t); return t; }
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement.scrollHeight - innerHeight;
+      if (this.barRef.current) this.barRef.current.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+    };
+    addEventListener('scroll', this.onScroll, { passive: true }); this.onScroll(); this.syncBody();
+    this.queueScene = () => { if (!this.sceneRaf) this.sceneRaf = requestAnimationFrame(this.sceneTick); };
+    this.onResize = () => { const n = innerWidth < 760; if (n !== this.state.narrow) this.setState({ narrow: n }); this.queueScene(); };
+    addEventListener('scroll', this.queueScene, { passive: true }); addEventListener('resize', this.onResize); this.queueScene();
+    this.startField();
+    if (!this.motion()) return;
+    // Pointer events can fire far faster than the screen refreshes, so apply at most once per frame.
+    let mx = 0, my = 0, moveRaf = 0;
+    const applyMove = () => {
+      moveRaf = 0;
+      const g = this.glowRef.current; if (g) g.style.transform = `translate(${mx - 320}px, ${my - 320}px)`;
+      const t = this.tiltRef.current;
+      if (t) { const rx = (my / innerHeight - .5) * -10, ry = (mx / innerWidth - .5) * 14; t.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`; }
+    };
+    this.onMove = e => { mx = e.clientX; my = e.clientY; if (!moveRaf) moveRaf = requestAnimationFrame(applyMove); };
+    addEventListener('pointermove', this.onMove);
+    this.hold = this.state.intro === 'run'; this.pending = [];
+    this.io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { this.io.unobserve(e.target); if (this.hold) this.pending.push(e.target); else this.play(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    this.scan();
+    if (this.hold) this.runIntro(); else this.later(() => this.rotate(0), 2400);
+  }
+  componentDidUpdate(prev) {
+    this.syncBody(); if (this.io) this.scan();
+    const p = this.props;
+    
+    this.queueScene && this.queueScene();
+    this.applyPalette();
+    if (this.field && prev && (prev.density !== p.density || prev.flow !== p.flow)) this.field.set({ density: p.density ?? 1, flow: p.flow ?? 1 });
+  }
+
+  startField() {
+    const go = () => {
+      if (this.dead || this.field) return;
+      const c = this.fieldRef.current;
+      if (!window.PortfolioField || !c) { this.later(go, 60); return; }
+      this.field = PortfolioField.create(c, { motion: this.motion(), density: this.props.density ?? 1, flow: this.props.flow ?? 1, hold: this.state.intro === 'run' && !this.fieldGo, camera: () => this.cam });
+      this.queueScene && this.queueScene();
+      this.applyPalette(true);
+      if (this.fieldGo) this.field.intro();
+      const g = this.grainRef.current; if (g) g.style.backgroundImage = `url(${PortfolioField.grain()})`;
+    };
+    go();
+  }
+  applyPalette(force) {
+    const r = this.rootRef.current; if (!r || !this.field) return;
+    const th = this.theme(); if (!force && th === this.palTheme) return; this.palTheme = th;
+    const cs = getComputedStyle(r), v = k => cs.getPropertyValue(k).trim();
+    this.field.setPalette({ text: v('--color-text'), accent: v('--color-accent'), hi: v('--color-accent-300'), bg: v('--color-bg') });
+  }
+
+  runIntro() {
+    const de = document.documentElement; this.prevOverflow = de.style.overflow; de.style.overflow = 'hidden';
+    try { scrollTo({ top: 0, behavior: 'instant' }); } catch (_) {}
+    [120, 380, 640, 900].forEach((ms, i) => this.later(() => { if (!this.introEnded) this.setState({ introStep: i + 1 }); }, ms));
+    const t0 = performance.now(), dur = 1400; let shown = -1, lastT = 0;
+    const tick = now => {
+      if (this.introEnded || this.dead) return;
+      const p = Math.min(1, (now - t0) / dur), v = Math.round(100 * (1 - Math.pow(1 - p, 2.4)));
+      if (v !== shown && (p === 1 || now - lastT > 40 + Math.random() * 70)) { shown = v; lastT = now; this.setCounter(v); }
+      if (p < 1) requestAnimationFrame(tick); else this.later(this.endIntro, 280);
+    };
+    requestAnimationFrame(tick);
+    this.onKey = () => this.endIntro(); addEventListener('keydown', this.onKey);
+  }
+  setCounter(v) {
+    const n = this.introNumRef.current, b = this.introBarRef.current;
+    if (n && n.firstChild) n.firstChild.nodeValue = String(v).padStart(3, '0');
+    if (b) b.style.transform = `scaleX(${v / 100})`;
+  }
+  endIntro = () => {
+    if (this.introEnded || this.state.intro !== 'run') return;
+    this.introEnded = true;
+    if (this.onKey) removeEventListener('keydown', this.onKey);
+    this.setCounter(100);
+    document.documentElement.style.overflow = this.prevOverflow || '';
+    try { sessionStorage.setItem('pt-intro', '1'); } catch (_) {}
+    this.setState({ intro: 'exit', introStep: 5 });
+    if (this.field) this.field.intro(); else this.fieldGo = true;
+    this.later(() => { this.hold = false; const q = this.pending || []; this.pending = []; q.forEach(el => this.play(el)); }, 220);
+    this.later(() => this.rotate(0), 2800);
+    this.later(() => this.setState({ intro: 'done' }), 1200);
+  };
+  scramble(el, d) {
+    const n = el.firstChild; if (!n || n.nodeType !== 3 || !n.nodeValue.trim()) return;
+    const fin = n.nodeValue, G = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#%&*+=<>/?', steps = 7 + (Math.random() * 6 | 0);
+    let k = 0;
+    this.later(() => {
+      const s = el.style; s.width = el.getBoundingClientRect().width + 'px'; s.textAlign = 'center'; s.color = 'var(--color-accent)';
+      const tick = () => {
+        if (++k >= steps) { n.nodeValue = fin; s.width = ''; s.textAlign = ''; s.color = ''; return; }
+        n.nodeValue = G[Math.random() * G.length | 0]; this.later(tick, 42);
+      };
+      tick();
+    }, d);
+  }
+  syncBody() { const r = this.rootRef.current; if (r) document.body.style.background = getComputedStyle(r).getPropertyValue('--color-bg'); }
+  // Two modes only: Nocturne (dark) and Bloom (light). Every visit starts in Nocturne.
+  theme() { return this.state.theme === 'bloom' ? 'bloom' : 'nocturne'; }
+  toggleMode = () => this.setState({ theme: this.theme() === 'bloom' ? 'nocturne' : 'bloom' });
+  componentWillUnmount() {
+    this.dead = true;
+    removeEventListener('scroll', this.onScroll); if (this.onMove) removeEventListener('pointermove', this.onMove);
+    if (this.onKey) removeEventListener('keydown', this.onKey);
+    if (this.state.intro === 'run') document.documentElement.style.overflow = this.prevOverflow || '';
+    removeEventListener('scroll', this.queueScene); removeEventListener('resize', this.onResize); cancelAnimationFrame(this.sceneRaf);
+    this.field && this.field.destroy();
+    this.io && this.io.disconnect(); this.timers.forEach(clearTimeout);
+  }
+
+  scan() {
+    const r = this.rootRef.current; if (!r) return;
+    r.querySelectorAll('[data-reveal],[data-type],[data-count]').forEach(el => {
+      if (el.__dc) return; el.__dc = 1;
+      if (el.hasAttribute('data-reveal')) {
+        const s = el.style; el.__o = { o: s.opacity, t: s.transform, tr: s.transition, f: s.filter };
+        const kind = el.getAttribute('data-reveal');
+        s.transition = 'none'; s.opacity = '0'; s.filter = 'blur(6px)';
+        s.transform = kind === 'left' ? 'translateX(-16px)' : kind === 'scale' ? 'scale(.94)' : 'translateY(28px)';
+      }
+      const n = el.firstChild;
+      if (el.hasAttribute('data-type') && n && n.nodeType === 3) { el.__txt = n.nodeValue; n.nodeValue = ''; }
+      if (el.hasAttribute('data-count') && n && n.nodeType === 3) { el.__to = +el.getAttribute('data-count'); n.nodeValue = '0'; }
+      this.io.observe(el);
+    });
+  }
+
+  play(el) {
+    const d = +(el.getAttribute('data-delay') || 0), n = el.firstChild;
+    if (el.__o) {
+      const o = el.__o, s = el.style;
+      requestAnimationFrame(() => {
+        s.transition = `opacity .9s ${EASE} ${d}ms, transform .9s ${EASE} ${d}ms, filter .9s ${EASE} ${d}ms`;
+        s.opacity = o.o; s.transform = o.t; s.filter = o.f;
+        this.later(() => { s.transition = o.tr; }, d + 950);
+      });
+    }
+    if (el.__txt != null && n) {
+      const txt = el.__txt; let i = 0;
+      const step = () => { n.nodeValue = txt.slice(0, ++i); if (i < txt.length) this.later(step, 45 + Math.random() * 45); };
+      this.later(step, d + 150);
+    }
+    if (el.__to != null && n) {
+      const to = el.__to, t0 = performance.now() + d, dur = 1600;
+      const tick = now => { const p = Math.min(1, Math.max(0, (now - t0) / dur)); n.nodeValue = String(Math.round(to * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }
+    if (el.hasAttribute('data-scramble')) this.scramble(el, d);
+  }
+
+  rotate(i) {
+    const el = this.rotRef.current; const n = el && el.firstChild; if (!n) return;
+    const cur = n.nodeValue, next = PHRASES[(i + 1) % PHRASES.length];
+    const del = () => { if (n.nodeValue.length) { n.nodeValue = n.nodeValue.slice(0, -1); this.later(del, 28); } else this.later(type, 250); };
+    let k = 0;
+    const type = () => { n.nodeValue = next.slice(0, ++k); if (k < next.length) this.later(type, 55 + Math.random() * 40); else this.later(() => this.rotate(i + 1), 2200); };
+    if (cur) del(); else type();
+  }
+
+  sceneTick = () => {
+    this.sceneRaf = 0;
+    const r = this.rootRef.current; if (!r) return;
+    const vh = innerHeight, vw = innerWidth, y = scrollY, max = Math.max(1, document.documentElement.scrollHeight - vh), mo = this.motion();
+    const E = {};
+    r.querySelectorAll('[data-scene]').forEach(el => { const b = el.getBoundingClientRect(); E[el.getAttribute('data-scene')] = { top: b.top + y, h: b.height }; });
+    const ks = SCENES.filter(k => E[k[0]]).map(([n, at, p]) => ({ y: E[n].top + at * (E[n].h - vh), p }));
+    if (ks.length) {
+      let i = 0; while (i < ks.length - 1 && y > ks[i + 1].y) i++;
+      const a = ks[i], b = ks[Math.min(i + 1, ks.length - 1)];
+      const t = b === a || y <= a.y ? 0 : easeIO(clamp01((y - a.y) / Math.max(1, b.y - a.y)));
+      const w = this.washRef.current; if (w) w.style.opacity = String(mix(a.p.wash, b.p.wash, t));
+      const size = Math.max(vw, vh) * .64;
+      [this.orb1Ref, this.orb2Ref, this.orb3Ref].forEach((ref, k) => {
+        const el = ref.current; if (!el) return;
+        const A = a.p.o[k], B = b.p.o[k];
+        el.style.transform = `translate(${mix(A[0], B[0], t) / 100 * vw - size / 2}px, ${mix(A[1], B[1], t) / 100 * vh - size / 2}px) scale(${mix(A[2], B[2], t)})`;
+        el.style.opacity = String(mix(A[3], B[3], t));
+      });
+    }
+    const Hs = E.hero, C = E.contact;
+    const pe = Hs ? (y - Hs.top) / Math.max(1, Hs.h - vh) : 0;
+    const s1 = easeIO(sstep(0, .6, pe)), slide = sstep(.62, 1.35, pe);
+    const hr = this.heroRef.current;
+    if (hr) { hr.style.transform = mo ? `translateY(${-s1 * 5}vh) scale(${1 - .08 * s1})` : ''; hr.style.opacity = mo ? String(1 - sstep(.1, .55, pe)) : ''; }
+    const end = y > (Hs ? Hs.top + Hs.h : 0) + vh, g = C ? sstep(C.top - vh, max, y) : 0;
+    let fr, op, sl;
+    if (!end) { fr = s1; sl = slide; op = 1 - sstep(.85, 1, slide); }
+    else { fr = 1 - easeIO(g); sl = 0; op = sstep(0, .3, g); }
+    this.cam = end ? CAM_END : CAM_HERO;
+    const T = fr * vh * .1, L = fr * vw * .07, rad = fr * 28, ty = -sl * vh * 1.15;
+    const st = this.stageRef.current, fm = this.frameRef.current;
+    if (st) {
+      st.style.clipPath = fr > .001 ? `inset(${T}px ${L}px ${T}px ${L}px round ${rad}px)` : '';
+      st.style.transform = ty ? `translateY(${ty}px)` : '';
+      st.style.opacity = String(op); st.style.visibility = op > .005 ? 'visible' : 'hidden';
+    }
+    if (fm) {
+      fm.style.top = fm.style.bottom = T + 'px'; fm.style.left = fm.style.right = L + 'px'; fm.style.borderRadius = rad + 'px';
+      fm.style.transform = ty ? `translateY(${ty}px)` : ''; fm.style.opacity = String(op * sstep(0, .2, fr));
+    }
+    if (this.field && this.field.setActive) this.field.setActive(op > .005);
+    const S = E.statement, sp = this.stmtRef.current;
+    if (S && sp) {
+      const q = clamp01((y - S.top) / Math.max(1, S.h - vh)), ws = sp.querySelectorAll('[data-w]'), n = ws.length;
+      ws.forEach((el, i) => { el.style.opacity = mo ? String(.14 + .86 * clamp01((q * (n + 4) - i) / 3)) : '1'; });
+    }
+  };
+
+  go = i => { const n = SERVICES.length; this.setState({ svc: ((i % n) + n) % n, dx: 0, drag: false }); };
+  onDown = e => { this.x0 = e.clientX; try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} this.setState({ drag: true, dx: 0 }); };
+  onDragMove = e => { if (this.state.drag) this.setState({ dx: e.clientX - this.x0 }); };
+  onDragEnd = () => {
+    if (!this.state.drag) return;
+    if (Math.abs(this.state.dx) > 90) this.go(this.state.svc + 1);
+    else this.setState({ drag: false, dx: 0 });
+  };
+
+  renderVals() {
+    const { cat, svc, dx, drag, sent } = this.state;
+    const name = this.props.name ?? 'Neil Villarey';
+    const n = SERVICES.length;
+    let idx = 0;
+    const nameWords = name.split(' ').map(w => ({ letters: [...w].map(c => ({ c, d: 150 + (idx++) * 45 })) }));
+    const list = PROJECTS.filter(p => cat === 'All' || p.cat === cat);
+    return {
+      rootRef: this.rootRef, glowRef: this.glowRef, barRef: this.barRef, tiltRef: this.tiltRef, rotRef: this.rotRef,
+      fieldRef: this.fieldRef, grainRef: this.grainRef, introNumRef: this.introNumRef, introBarRef: this.introBarRef,
+      stageRef: this.stageRef, frameRef: this.frameRef, washRef: this.washRef, orb1Ref: this.orb1Ref, orb2Ref: this.orb2Ref, orb3Ref: this.orb3Ref, heroRef: this.heroRef, stmtRef: this.stmtRef,
+      statementWords: parseStatement(this.props.statement ?? STATEMENT), cardDisplay: this.state.narrow ? 'none' : 'block',
+      introShow: this.state.intro !== 'done', introClip: this.state.intro === 'run' ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)',
+      introShift: this.state.intro === 'run' ? 'translateY(0)' : 'translateY(-14vh)', skipIntro: this.endIntro,
+      introLines: bootLines(name.toLowerCase().replace(/[^a-z0-9]+/g, ''), this.theme()).slice(0, this.state.introStep),
+      name, nameWords,
+      theme: this.theme(), toggleMode: this.toggleMode,
+      modeLabel: this.theme() === 'bloom' ? 'Switch to dark mode' : 'Switch to light mode',
+      sunDisplay: this.theme() === 'bloom' ? 'none' : 'block', moonDisplay: this.theme() === 'bloom' ? 'block' : 'none',
+      handle: name.toLowerCase().replace(/[^a-z0-9]+/g, ''),
+      role: this.props.role ?? 'Full-stack developer',
+      email: this.props.email ?? 'hello@yourname.dev',
+      location: this.props.location ?? 'City, Country',
+      glowOpacity: (this.props.cursorGlow ?? true) && this.motion() ? 1 : 0,
+      marquee: MARQUEE.concat(MARQUEE),
+      stats: STATS,
+      svcNum: String(svc + 1).padStart(2, '0'), svcTotal: String(n).padStart(2, '0'),
+      prevSvc: () => this.go(svc - 1), nextSvc: () => this.go(svc + 1),
+      svcDots: SERVICES.map((_, i) => ({ w: i === svc ? '28px' : '10px', bg: i === svc ? 'var(--color-accent)' : 'var(--color-neutral-800)', go: () => this.go(i) })),
+      svcCards: SERVICES.map((s, i) => {
+        const rel = (i - svc + n) % n, top = rel === 0;
+        const x = top ? dx : rel * 16, y = rel * 16, rot = top ? dx / 16 : rel * 1.5;
+        return { ...s, z: n - rel, op: rel > 3 ? 0 : 1, cursor: top ? (drag ? 'grabbing' : 'grab') : 'default',
+          tf: `translate(${x}px, ${y}px) rotate(${rot}deg) scale(${1 - rel * 0.04})`,
+          tr: drag && top ? 'none' : `transform .6s ${EASE}, opacity .5s`,
+          down: top ? this.onDown : undefined };
+      }),
+      onDragMove: this.onDragMove, onDragEnd: this.onDragEnd,
+      filters: CATS.map(label => ({ label, checked: label === cat,
+        count: label === 'All' ? PROJECTS.length : PROJECTS.filter(p => p.cat === label).length,
+        pick: () => this.setState({ cat: label }) })),
+      projects: list.map((p, i) => ({ ...p, d: (i % 3) * 110 })),
+      skills: SKILLS,
+      sent, notSent: !sent,
+      submit: e => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
