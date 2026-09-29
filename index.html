@@ -355,7 +355,7 @@ const PROJECTS = [
   ['Queue Tip', 'Web', 'In progress', '2025', 'Help desk ticketing system that routes every ticket to the least busy agent by priority, with live alerts, agent levels and an admin board.', 'Spring Boot · Next.js · MySQL', 'work/queue-tip.html'],
   ['Leasy', 'Web', 'In progress', '2026', 'Rental manager for small landlords: rent collected vs pending, properties and tenants, utility readings and shareable receipts.', 'React · TypeScript · TanStack Start', 'work/leasy.html'],
   ['Shortlist', 'AI/ML', 'In progress', '2026', 'AI job search workspace that ranks new roles against your resume, filters out duplicates and risky posts, and runs your whole pipeline.', 'Next.js · TypeScript · DeepSeek', 'work/shortlist.html'],
-  ['Beaker Counter', 'Web', 'In progress', '2025', 'Inventory system for lab reagents with stock levels, usage logs and a shared cloud database.', 'React · TypeScript · Supabase'],
+  ['Beaker Counter', 'Web', 'In progress', '2026', 'Lab reagent inventory with a single health score, lot and expiry tracking, inline stock counts and a command palette.', 'React · TypeScript · Supabase', 'work/beaker-counter.html'],
 ].map(([name, cat, status, year, desc, stack, href], i) => ({ name, cat, status, year, desc, stack, href: href || '#work', noLink: href ? 'false' : 'true', pe: href ? 'auto' : 'none', arrow: href ? 'inline-block' : 'none', slot: 'project-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
   tagClass: 'tag ' + (status === 'Finished' ? 'tag-accent' : status === 'In progress' ? 'tag-outline' : 'tag-neutral') }));
 

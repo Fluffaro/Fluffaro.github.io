@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beaker Counter | Neil Villarey</title>
+<meta name="description" content="Beaker Counter (Stock Keeper) is a lab reagent inventory dashboard that tracks lots, stock levels and expiry dates, built by Neil Villarey with React, TypeScript and Supabase.">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="work.css">
+<style>
+  :root { --tint: #3ad6c1; }
+  .hero::before { background: radial-gradient(ellipse 60% 55% at 70% 35%, color-mix(in srgb, #149d8f 28%, transparent), transparent 70%); }
+  .stage .phone.front { position: absolute; width: 24%; right: 2%; bottom: 0; border-radius: 28px; }
+  @media (max-width: 820px) { .stage .phone.front { position: relative; width: 44%; margin: -40% 0 0 auto; right: auto; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="../index.html#work"><i class="ph ph-arrow-left"></i> ~/neilvillarey</a>
+    <span style="display:inline-flex;align-items:center;gap:8px;color:var(--color-neutral-500)"><span class="dot"></span>work/beaker-counter</span>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="kicker rv">Web app · Lab inventory · 2026</p>
+      <h1 class="rv">Beaker Counter</h1>
+      <p class="lede rv">A reagent inventory dashboard for medical technologists, shipped as Stock Keeper. It tracks every lot, stock level and expiry date, and tells the lab at a glance what's running low, what's about to expire and what should already be off the shelf.</p>
+      <dl class="meta rv">
+        <div><dt>Role</dt><dd>Solo developer: product, design and build</dd></div>
+        <div><dt>Platform</dt><dd>Responsive web, desktop first</dd></div>
+        <div><dt>Stack</dt><dd>React, TypeScript, Vite, Supabase</dd></div>
+        <div><dt>Status</dt><dd>In progress, freshly redesigned</dd></div>
+      </dl>
+    </div>
+    <div class="wrap">
+      <div class="stage rv">
+        <div class="browser back"><img src="img/beaker-counter/overview-dark.webp" alt="Overview with inventory health score, stock KPIs and expiry outlook"></div>
+        <div class="phone front"><img src="img/beaker-counter/mobile-inventory-dark.webp" alt="Inventory list on a phone with status, expiry and stock steppers" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat why.md</b></p>
+      <h2 class="rv">Expired reagents shouldn't be a surprise</h2>
+      <div class="prose rv">
+        <p>Clinical labs run on reagents, controls and calibrators that expire, and a missed date means a failed run or a wasted order. Keeping that in a spreadsheet means someone has to remember to look.</p>
+        <p>Beaker Counter looks for you. Every item carries its lot, quantity, reorder threshold and expiry, and the whole inventory rolls up into one health score with a list of exactly what needs attention today.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>ls ./features</b></p>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">01</p>
+          <h3>One health score for the whole lab</h3>
+          <p>The overview turns the inventory into a single percentage of healthy items, split into healthy, attention and critical. Tiles show what's tracked, low, expiring within 30 days and expired, with a breakdown by category and an expiry outlook chart.</p>
+          <ul>
+            <li>A prioritised needs attention list</li>
+            <li>Upcoming expirations on a timeline</li>
+          </ul>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/beaker-counter/overview-dark.webp" alt="Overview in dark mode" loading="lazy"></div>
+          <div class="browser"><img src="img/beaker-counter/overview-light.webp" alt="Overview in light mode" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide flip">
+        <div class="rv">
+          <p class="num">02</p>
+          <h3>A table built for the bench</h3>
+          <p>Search by name, lot, category or unit, filter by status, and sort by any column. Stock changes happen inline with plus and minus steppers, and every row shows its expiry in plain words, like "expired 12 days ago".</p>
+          <ul>
+            <li>Filters live in the URL, so any view can be bookmarked or shared</li>
+            <li>Bulk move, CSV export and delete with an undo toast</li>
+          </ul>
+        </div>
+        <div class="web rv">
+          <div class="browser"><img src="img/beaker-counter/inventory-dark.webp" alt="Inventory table with status, stock steppers and expiry" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide">
+        <div class="rv">
+          <p class="num">03</p>
+          <h3>Every lot, in detail</h3>
+          <p>Opening an item shows its lot number, what's on hand against the reorder point, expiry and when it was added. Receive, use or count stock with a live preview of the resulting status, or receive a new lot with its own expiry.</p>
+        </div>
+        <div class="web rv">
+          <div class="browser"><img src="img/beaker-counter/detail-dark.webp" alt="Item detail sheet for an expired stain kit" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature wide flip">
+        <div class="rv">
+          <p class="num">04</p>
+          <h3>Fast to drive from the keyboard</h3>
+          <p>A command palette on Ctrl + K jumps to any item by name or lot, runs actions like adding an item or exporting, and switches themes. Categories group the stock, each with its own health bar and a count of what needs attention.</p>
+          <ul>
+            <li>Shortcuts for adding items and focusing search</li>
+            <li>Light and dark themes with reduced motion support</li>
+          </ul>
+        </div>
+        <div class="web pair rv">
+          <div class="browser"><img src="img/beaker-counter/palette-light.webp" alt="Command palette in light mode" loading="lazy"></div>
+          <div class="browser"><img src="img/beaker-counter/categories-dark.webp" alt="Categories with health bars" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="rv">
+          <p class="num">05</p>
+          <h3>Works on a phone at the shelf</h3>
+          <p>On a phone the table becomes cards with the status, expiry and a stepper on each item, so counts can be updated standing at the fridge. Status is always shown with an icon and a label, never color alone.</p>
+        </div>
+        <div class="shots rv">
+          <div class="phone"><img src="img/beaker-counter/mobile-dark.webp" alt="Overview on a phone" loading="lazy"></div>
+          <div class="phone"><img src="img/beaker-counter/mobile-inventory-dark.webp" alt="Inventory cards on a phone" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label rv">~ $ <b>cat stack.txt</b></p>
+      <h2 class="rv">Under the hood</h2>
+      <div class="stack">
+        <div class="card rv"><div class="k">App</div><h4>React 18 + TypeScript</h4><p>Built with Vite, shadcn/ui on Radix primitives, and Tailwind.</p></div>
+        <div class="card rv"><div class="k">Data</div><h4>Supabase (PostgreSQL)</h4><p>Items and categories live in Postgres behind a small repository layer.</p></div>
+        <div class="card rv"><div class="k">Demo</div><h4>Runs without a backend</h4><p>With no database configured it switches to realistic sample data saved in the browser, with dates relative to today.</p></div>
+        <div class="card rv"><div class="k">Forms</div><h4>React Hook Form + Zod</h4><p>Validated forms, cmdk for the palette, date-fns for dates and sonner for toasts.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <div>
+      <small>Next project</small>
+      <a class="big" href="overload.html">Overload <i class="ph ph-arrow-right"></i></a>
+    </div>
+    <a class="home" href="../index.html#work">Back to all work</a>
+  </div>
+</footer>
+
+<script src="work.js"></script>
+</body>
+</html>
