@@ -291,7 +291,7 @@ a:hover{color:var(--color-accent-400)}
             <div class="field"><label for="e">Email</label><input id="e" type="email" class="input" required></div>
           </div>
           <div class="field"><label for="m">Message</label><textarea id="m" class="input" style="min-height:140px" required></textarea></div>
-          <button type="submit" class="btn btn-primary" style="align-self:flex-start;padding:11px 20px">Send message <i class="ph ph-paper-plane-right"></i></button>
+          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><button type="submit" class="btn btn-primary" disabled="{{ sending }}" style="padding:11px 20px">{{ sendLabel }} <i class="ph ph-paper-plane-right"></i></button><span role="status" style="font-size:13px;color:var(--color-danger,#e5484d)">{{ sendError }}</span></div>
         </form>
       </sc-if>
       <sc-if value="{{ sent }}">
@@ -407,7 +407,7 @@ const SCENES = [
 ];
 
 class Component extends DCLogic {
-  state = { cat: 'All', svc: 0, dx: 0, drag: false, sent: false, intro: this.introMode() ? 'run' : 'done', introStep: 0, narrow: typeof innerWidth === 'number' && innerWidth < 760 };
+  state = { cat: 'All', svc: 0, dx: 0, drag: false, sent: false, sending: false, sendError: '', intro: this.introMode() ? 'run' : 'done', introStep: 0, narrow: typeof innerWidth === 'number' && innerWidth < 760 };
   rootRef = React.createRef(); glowRef = React.createRef(); barRef = React.createRef(); tiltRef = React.createRef(); rotRef = React.createRef();
   fieldRef = React.createRef(); grainRef = React.createRef(); introNumRef = React.createRef(); introBarRef = React.createRef();
   stageRef = React.createRef(); frameRef = React.createRef(); washRef = React.createRef(); orb1Ref = React.createRef(); orb2Ref = React.createRef(); orb3Ref = React.createRef(); heroRef = React.createRef(); stmtRef = React.createRef();
@@ -586,6 +586,26 @@ class Component extends DCLogic {
     if (cur) del(); else type();
   }
 
+  // Contact form: delivered to the site owner's inbox through FormSubmit (no backend needed on GitHub Pages).
+  sendMessage = async e => {
+    e.preventDefault();
+    if (this.state.sending) return;
+    const f = e.target, val = id => (f.querySelector('#' + id) || {}).value || '';
+    this.setState({ sending: true, sendError: '' });
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/' + (this.props.email ?? 'neilvillarey@gmail.com'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ name: val('n'), email: val('e'), message: val('m'), _replyto: val('e'), _subject: 'Portfolio message from ' + val('n'), _template: 'table', _captcha: 'false' }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.success === false || data.success === 'false') throw new Error(data.message || 'Send failed');
+      this.setState({ sending: false, sent: true });
+    } catch (_) {
+      this.setState({ sending: false, sendError: "Couldn't send right now. Please email me directly instead." });
+    }
+  };
+
   sceneTick = () => {
     this.sceneRaf = 0;
     const r = this.rootRef.current; if (!r) return;
@@ -688,7 +708,8 @@ class Component extends DCLogic {
       projects: list.map((p, i) => ({ ...p, d: (i % 3) * 110 })),
       skills: SKILLS,
       sent, notSent: !sent,
-      submit: e => { e.preventDefault(); this.setState({ sent: true }); },
+      sending: this.state.sending, sendLabel: this.state.sending ? 'Sending...' : 'Send message', sendError: this.state.sendError,
+      submit: this.sendMessage,
     };
   }
 }
